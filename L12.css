@@ -21,6 +21,7 @@ input[type=text], select {
     padding: 8px;
     border: 2px solid #73C6B6;
     border-radius: 4px;
+    text-transform: capitalize;
 }
 label {
     padding: 8px 4px 4px 0px;
@@ -63,4 +64,16 @@ input[type=submit]:hover {
     content: "";
     display: table;
     clear: both;
+}
+.row2 {
+    /* border: 2px solid saddlebrown; */
+    width: 80%;
+    height: 130px;
+    margin: 0px auto;
+    background-color: #A2D9CE;
+    display: flex;
+
+}
+.name, .township {
+    text-transform: capitalize;
 }

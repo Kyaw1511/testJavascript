@@ -35,7 +35,7 @@
             Request Form
         </h2>
         <div class="container">
-            <form action="">
+            <div>
                 <!-- first name -->
                 <div class="row">
                     <div class="col-25">
@@ -67,7 +67,7 @@
                 <!-- Township name -->
                 <div class="row">
                     <div class="col-25">
-                        <label for="country">Township</label>
+                        <label for="township">Township</label>
                     </div>
                     <div class="col-50">
                         <select 
@@ -89,7 +89,7 @@
                 <!-- date -->
                 <div class="row">
                     <div class="col-25">
-                        <label for="date">Day</label>
+                        <label for="day">Day</label>
                     </div>
                     <div class="col-50">
                         <input 
@@ -104,19 +104,20 @@
                 <div class="row">
                     <div class="col-50">
                         <input 
+                            onclick="formReq()"
                             type="submit"
                             value="submit"
                         >
                     </div>
                 </div>
-            </form>
-            <div class="row">
+            </div>
+            <div class="row2">
                 <div class="col-25">
-                    <p>Name :</p>
-                    <p>Township :</p>
-                    <p>Day :</p>
+                    <p>Name </p>
+                    <p>Township </p>
+                    <p>Day </p>
                 </div>
-                <div class="col-75">
+                <div class="col-50">
                     <p class="name"></p>
                     <p class="township"></p>
                     <p class="day"></p>
