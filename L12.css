@@ -72,7 +72,6 @@ input[type=submit]:hover {
     margin: 0px auto;
     background-color: #A2D9CE;
     display: flex;
-
 }
 .name, .township {
     text-transform: capitalize;
