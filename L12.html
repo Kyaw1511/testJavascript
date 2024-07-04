@@ -1,0 +1,131 @@
+<!-- 
+    Start Date : 4-7-2024;
+    Test JavaScript
+    Tutor : WebHub Page.
+    lesson: 12;
+    Switch Statement 
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta 
+            charset="UTF-8"
+        >
+        <meta 
+            name="viewport" 
+            content="width=device-width, initial-scale=1.0"
+        >
+        <meta 
+            name="description"
+            content="test JavaScript Lessons"
+        >
+        <meta
+            name="keywords"
+            content="test, JavaScript"
+        >
+        <meta
+            name="viewport"
+            content="width= device-width, initial-scale=1.0"
+        >
+        <link rel="stylesheet" href="L12.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <h2>
+            Request Form
+        </h2>
+        <div class="container">
+            <form action="">
+                <!-- first name -->
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fname">First Name</label>
+                    </div>
+                    <div class="col-50">
+                        <input 
+                            type="text"
+                            id="fname"
+                            name="firstname"
+                            placeholder="Your name."
+                        >
+                    </div>
+                </div>
+                <!-- last name -->
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Last Name</label>
+                    </div>
+                    <div class="col-50">
+                        <input 
+                            type="text" 
+                            id="lname"
+                            name="lastname"
+                            placeholder="Last Name"
+                        >
+                    </div>
+                </div>
+                <!-- Township name -->
+                <div class="row">
+                    <div class="col-25">
+                        <label for="country">Township</label>
+                    </div>
+                    <div class="col-50">
+                        <select 
+                            name="township" 
+                            id="township"
+                        >
+                            <option value="lamadaw">
+                                Lamadaw
+                            </option>
+                            <option value="yankin">
+                                Yankin
+                            </option>
+                            <option value="kamayut">
+                                Kamayut
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <!-- date -->
+                <div class="row">
+                    <div class="col-25">
+                        <label for="date">Day</label>
+                    </div>
+                    <div class="col-50">
+                        <input 
+                            type="text"
+                            id="day"
+                            name="day"
+                            placeholder="Enter the day."
+                        >
+                    </div>
+                </div>
+                <!-- submit btn -->
+                <div class="row">
+                    <div class="col-50">
+                        <input 
+                            type="submit"
+                            value="submit"
+                        >
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <div class="col-25">
+                    <p>Name :</p>
+                    <p>Township :</p>
+                    <p>Day :</p>
+                </div>
+                <div class="col-75">
+                    <p class="name"></p>
+                    <p class="township"></p>
+                    <p class="day"></p>
+                </div>
+            </div>
+        
+        </div>
+    </body>
+    <script src="L12.js">
+
+    </script>
+</html>

@@ -1,0 +1,84 @@
+<!-- 
+    Start Date : 1-7-2024;
+    Test JavaScript
+    Tutor : WebHub Page.
+    lesson: 5;
+    Operators;
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta 
+            charset="UTF-8"
+        >
+        <meta 
+            name="viewport" 
+            content="width=device-width, initial-scale=1.0"
+        >
+        <meta 
+            name="description"
+            content="test JavaScript Lessons"
+        >
+        <meta
+            name="keywords"
+            content="test, JavaScript"
+        >
+        <meta
+            name="viewport"
+            content="width= device-width, initial-scale=1.0"
+        >
+        <title>Document</title>
+    </head>
+    <body>
+        <p id="add"></p>
+        <p id="subTotal"></p>
+        <p id="multiTotal"></p>
+        <p class="divTotal"></p>
+        <p class="remainder"></p>
+        <p class="inc"></p>
+        <p class="dec"></p>
+        <p class="total1"></p>
+    </body>
+    <script>
+        // operators
+        let num1 = 100;
+        let num2 = 10;
+        // addition
+        let addTotal = num1 + num2;
+        console.log(addTotal)
+        document.querySelector("#add").innerText = addTotal;
+        // substract
+        let subTotal = num1 - num2;
+        console.log(subTotal);
+        document.querySelector("#subTotal").innerText = subTotal;
+        // multiplication
+        let multiTotal = num1 * num2;
+        console.log(multiTotal);
+        document.querySelector("#multiTotal").innerText = multiTotal;
+        // Division
+        let divTotal = num1 / num2;
+        console.log(divTotal);
+        document.querySelector(".divTotal").innerText = divTotal;
+        // remainder
+        let remainder = num1 % 3;
+        console.log(remainder);
+        document.querySelector(".remainder").innerText = remainder;
+        // increment
+        let inc = ++ num1;
+        console.log(inc);
+        document.querySelector(".inc").innerText = inc;
+        // decrement
+        let dec = -- num2;
+        console.log(dec);
+        document.querySelector(".dec").innerText = dec;
+        // left to right operate
+        let total1 = 56 + 23 - 87 + 9;
+        console.log(total1);
+        document.querySelector(".total1").innerText = total1;
+        // == sign
+        console.log(20 == 20);
+        console.log(15 == "15");
+        // === sign
+        console.log(30 === "30");
+    </script>
+</html>
