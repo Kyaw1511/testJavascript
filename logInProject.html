@@ -1,0 +1,60 @@
+<!-- 
+    Start Date : 5-7-2024;
+    Test JavaScript
+    Tutor : WebHub Page.
+    lesson: 14;
+    LogIn project 1
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta 
+            charset="UTF-8"
+        >
+        <meta 
+            name="viewport" 
+            content="width=device-width, initial-scale=1.0"
+        >
+        <meta 
+            name="description"
+            content="test JavaScript Lessons"
+        >
+        <meta
+            name="keywords"
+            content="test, JavaScript"
+        >
+        <meta
+            name="viewport"
+            content="width= device-width, initial-scale=1.0"
+        >
+        <link 
+            rel="stylesheet" 
+            href="logInProject.css"
+        >
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 id="success"></h1>
+        <div class="container">
+            <h1>login</h1>
+            <em id="error"></em>
+            <form
+                onsubmit="logIn(event)"
+            >
+                <input 
+                    type="email" 
+                    id="email" 
+                    placeholder="Enter your email."
+                >
+                <input 
+                    type="password" 
+                    id="pw" 
+                    placeholder="Enter your password."
+                >
+                <button type="submit">login</button>
+            </form>
+        </div>
+        <!-- script -->
+        <script src="logInProject.js"></script>
+    </body>
+</html>
