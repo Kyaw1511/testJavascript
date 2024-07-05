@@ -31,26 +31,27 @@
     </head>
     <body>
         
+        <!-- script -->
+        <script>
+            let num1 = 1234;
+            console.log(typeof(num1));
+            let num2 = 22.222;
+            console.log(typeof(num2));
+            console.log(num2.toFixed(1));
+            console.log(typeof(num2.toFixed(1)));
+            let num3 = 34.58903;
+            console.log(num3.toPrecision(3));
+            console.log(typeof(num3.toPrecision(4)));
+            // to change string to number method;
+            console.log(Number(num3.toPrecision(4)));
+            console.log(typeof(Number(num3.toPrecision(4))));
+            let num4 = 3.14;
+            console.log(num4);
+            // change to decimal to integer number;
+            console.log(parseInt(num4));
+            // change toFixed (string value) to number
+            console.log(typeof(parseInt(num2.toFixed(2))));
+            console.log(typeof(parseFloat(num2.toFixed(1))));
+        </script>
     </body>
-    <script>
-        let num1 = 1234;
-        console.log(typeof(num1));
-        let num2 = 22.222;
-        console.log(typeof(num2));
-        console.log(num2.toFixed(1));
-        console.log(typeof(num2.toFixed(1)));
-        let num3 = 34.58903;
-        console.log(num3.toPrecision(3));
-        console.log(typeof(num3.toPrecision(4)));
-        // to change string to number method;
-        console.log(Number(num3.toPrecision(4)));
-        console.log(typeof(Number(num3.toPrecision(4))));
-        let num4 = 3.14;
-        console.log(num4);
-        // change to decimal to integer number;
-        console.log(parseInt(num4));
-        // change toFixed (string value) to number
-        console.log(typeof(parseInt(num2.toFixed(2))));
-        console.log(typeof(parseFloat(num2.toFixed(1))));
-    </script>
 </html>

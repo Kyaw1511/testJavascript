@@ -46,42 +46,44 @@
             change backgroundColor
         </button>
         <!-- function part II -->
-         <button onclick="changeBg2('#000', '#ccc')">
-            change backgroundColor2
-         </button>
-    </body>
-    <script>
-        function changeBg(){
-            document.body.style.backgroundColor = "#444";
-            document.body.style.color = "#ccc";
-        }
-        // function part II
-        function changeBg2(bgColor, textColor){
-            document.body.style.backgroundColor = bgColor;
-            document.body.style.color = textColor;
-        }
-        function add(x, y){
-            let z;
-            z = x + y;
-            return z;
-        }
-        let res = add(11, 2);
-        console.log(res)
+        <button onclick="changeBg2('#000', '#ccc')">
+        change backgroundColor2
+        </button>
 
-        // annynomous function
-        let fun = (a, b) => {
-            let k;
-            k = a * b;
-            return k;
-        }
-        console.log(fun(5,4));
-        // annynomous shorten function
-        let fun2 = (h, j) => {
-            return h * j;
-        }
-        console.log(fun2(4, 4));
-        // annynomous oneline statement function
-        let fun3 = (r, s) => r * s;
-        console.log(fun3(3, 3));
-    </script>
+        <!-- script -->
+        <script>
+            function changeBg(){
+                document.body.style.backgroundColor = "#444";
+                document.body.style.color = "#ccc";
+            }
+            // function part II
+            function changeBg2(bgColor, textColor){
+                document.body.style.backgroundColor = bgColor;
+                document.body.style.color = textColor;
+            }
+            function add(x, y){
+                let z;
+                z = x + y;
+                return z;
+            }
+            let res = add(11, 2);
+            console.log(res)
+    
+            // annynomous function
+            let fun = (a, b) => {
+                let k;
+                k = a * b;
+                return k;
+            }
+            console.log(fun(5,4));
+            // annynomous shorten function
+            let fun2 = (h, j) => {
+                return h * j;
+            }
+            console.log(fun2(4, 4));
+            // annynomous oneline statement function
+            let fun3 = (r, s) => r * s;
+            console.log(fun3(3, 3));
+        </script>
+    </body>
 </html>
