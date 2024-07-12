@@ -1,5 +1,4 @@
-@import 
-url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -23,8 +22,13 @@ url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
     height: 100vh;
 }
 .inner-box {
+    /* border: 2px solid greenyellow; */
     flex-direction: column;
+    width: 100%;
     gap: 24px;
+}
+.input-container {
+    width: 50%;
 }
 .btn-container {
     gap: 12px;
@@ -56,7 +60,7 @@ url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 }
 input {
     height: 48px;
-    width: 360px;
+    width: 100%;
     border: 2px solid sienna;
     border-radius: 10px;
     text-align: center;
