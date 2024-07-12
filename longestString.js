@@ -1,6 +1,6 @@
 // search longest value in array;
 let arr = [
-    "Computer Science",
+    
     "Computer Technology",
     "Data Science",
     "Algorithms",
@@ -12,9 +12,9 @@ let arr = [
 let longestStr = "";
 let secondStr = "";
 arr.forEach(x => {
-    if(x.length > longestStr.length && x.length > secondStr) {
+    if(x.length > longestStr.length && x.length-- > secondStr.length) {
         longestStr = x;
-        secondStr = x;
+        secondStr = x.length--;
 
     };
 });
