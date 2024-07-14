@@ -1,6 +1,5 @@
 // search longest value in array;
 let arr = [
-    
     "Computer Technology",
     "Data Science",
     "Algorithms",
@@ -10,6 +9,8 @@ let arr = [
     "Java"
 ]; 
 let longestStr = "";
+let secStr = "";
+let thirdStr = "";
 for (
     let index = 0;
     index < arr.length;
@@ -20,8 +21,8 @@ for (
 arr.forEach(x => {
     if(x.length > longestStr.length) {
         longestStr = x;
+        
     };
 });
-
 document.getElementById("longestString").innerHTML = longestStr;
 console.log(longestStr);
