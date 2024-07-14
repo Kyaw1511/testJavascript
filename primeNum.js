@@ -10,7 +10,7 @@ inputd.onclick = () => {
         return false;
     }
     for (
-        let i = 2;
+        let i = 2;  
         i <= Math.sqrt(num);
         i++
     ) {
