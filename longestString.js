@@ -10,12 +10,18 @@ let arr = [
     "Java"
 ]; 
 let longestStr = "";
-let secondStr = "";
+for (
+    let index = 0;
+    index < arr.length;
+    index++
+) {
+    document.getElementById("arr").innerHTML += `<li>${arr[index]}</li>`;
+}
 arr.forEach(x => {
-    if(x.length > longestStr.length && x.length-- > secondStr.length) {
+    if(x.length > longestStr.length) {
         longestStr = x;
-        secondStr = x.length--;
-
     };
 });
+
+document.getElementById("longestString").innerHTML = longestStr;
 console.log(longestStr);
