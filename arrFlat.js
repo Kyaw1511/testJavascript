@@ -3,6 +3,7 @@ const array = document.getElementById("array");
 const array2 = document.getElementById("array2");
 const array3 = document.getElementById("array3");
 const array4 = document.getElementById("array4");
+const array5 = document.getElementById("array5");
 
 let arr = [[11, 22, 33], [44, 55, 66]];
 let arry = [[10, 20, 60], [30, 40, 50], [33, 44, 55]];
@@ -22,12 +23,14 @@ for(
         for(
             let c = 0; c < arry[b].length; c++
         ) {
-            array4.innerHTML = `${arry} <br>`;
+            array4.innerHTML = `${arry}`;
             console.log(arry[c])
         }
     } 
     
 }
 let newArr = arr.flat();
+let newArr1 = arry.flat();
 array3.innerText = newArr;
+array5.innerHTML = newArr1;
 console.log(newArr);
