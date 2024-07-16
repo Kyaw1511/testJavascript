@@ -26,3 +26,6 @@ arr.forEach(x => {
 });
 document.getElementById("longestString").innerHTML = longestStr;
 console.log(longestStr);
+
+console.log(arr.sort());
+document.getElementById("sorting").innerHTML = `<li>${arr.sort()}</li>`;
