@@ -35,22 +35,32 @@ console.log("reverse");
 console.log(arr.reverse());
 console.log("length");
 console.log(arr.reverse().find((y) => y.length > 21));
+// ascendign order and desending order;
 arr.forEach(z => {
-    // if(z.length > arrange.length) {
-        
-    //     arrange = arr.sort((a,b) => a.length - b.length);
-    // };
-    arrange = arr.sort((a,b) => a.length - b.length);
-    
+    ascending = arr.sort((a,b) => a.length - b.length);
+    // threeAscending = [ascending[0],ascending[1],ascending[2]];
     // console.log(z + "test");
-})
-console.log("z value of "+lngStr);
-console.log("z value of "+arrange);
+});
+
+console.log(ascending.slice(0,3));
+console.log("z value of "+ lngStr);
+console.log("z value of "+ ascending);
+
 // arrange array of length ascending order;
-document.getElementById("arrange").innerHTML += arrange.join("<br>");
+document.getElementById("ascending").innerHTML += ascending.join("<br>");
+// output for 3 ascending order;
+document.getElementById("threeAscending").innerHTML += ascending.slice(0,3).join("<br>");
+
+// arrange array of length descending order;
+arr.forEach(q => {
+    descending = arr.sort((a,b) => b.length - a.length);
+});
+document.getElementById("descending").innerHTML += descending.join("<br>");
+// output for 3 descending order;
+document.getElementById("threeDescending").innerHTML += descending.slice(0,3).join("<br>");
+
 document.getElementById("longestString").innerHTML = longestStr;
 console.log(longestStr);
-
 
 console.log(arr.sort());
 document.getElementById("days").innerHTML += arr.sort() + "<br>";
