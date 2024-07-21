@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Kyaw Thu",
+        "age": 22,
+        "hobbies": ["Coding", "Soccer", "Reading"],
+        "isActive": true,
+        "children": {
+            "child1": "Thar Thar",
+            "child2": "Thuzar"
+        }
+    },
+    {
+        "name": "Zaw Zaw",
+        "age": 28,
+        "hobbies": ["Coding", "Soccer", "Reading"],
+        "isActive": true,
+        "children": {
+            "child1": "Aye Aye",
+            "child2": "Maung Hla"
+        }
+    },
+    {
+        "name": "Aung Tun",
+        "age": 24,
+        "hobbies": ["Coding", "Soccer", "Reading"],
+        "isActive": true,
+        "children": {
+            "child1": "Kaung Kaung",
+            "child2": "Tun Tun"
+        }
+    }
+]
