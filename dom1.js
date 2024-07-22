@@ -27,3 +27,31 @@ console.log(h3);
 
 const items1 = document.querySelector("#lists .item:last-child");
 console.log(items1);
+
+// using childNodes
+console.log(document.querySelector("#lists").childNodes);
+console.log(
+    document.querySelector("#lists").children
+);
+console.log(
+    document.querySelector("#lists").children[1].textContent
+);
+console.log(
+    document.querySelector("#lists").lastElementChild.textContent
+);
+
+// parent nodes;
+console.log(
+    document.querySelector(".active").parentNode
+)
+console.log(
+    document.querySelector(".active").parentElement
+)
+
+// using next sibling;
+console.log(
+    document.querySelector("#para").nextSibling
+) 
+console.log(
+    document.querySelector("#para").nextElementSibling
+)
