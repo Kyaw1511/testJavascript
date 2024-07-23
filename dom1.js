@@ -55,3 +55,9 @@ console.log(
 console.log(
     document.querySelector("#para").nextElementSibling
 )
+
+// 23-7-2024;
+function myfun() {
+    document.querySelector("#part3").innerText = "I am handsome.";
+    document.querySelector("#lists li:last-child").style.color = "#f00";
+}
