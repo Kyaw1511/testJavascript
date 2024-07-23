@@ -59,5 +59,12 @@ console.log(
 // 23-7-2024;
 function myfun() {
     document.querySelector("#part3").innerText = "I am handsome.";
+    // document.querySelector("part3").innerHTML = "Hello World";
     document.querySelector("#lists li:last-child").style.color = "#f00";
 }
+
+// dom part 4
+const lists4 = document.querySelector("#lists");
+console.log(lists4.firstElementChild.classList);
+lists4.firstElementChild.classList.add("move", "web");
+console.log(lists4.firstElementChild.classList);
