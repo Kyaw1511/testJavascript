@@ -68,3 +68,28 @@ const lists4 = document.querySelector("#lists");
 console.log(lists4.firstElementChild.classList);
 lists4.firstElementChild.classList.add("move", "web");
 console.log(lists4.firstElementChild.classList);
+
+// add class;
+document.querySelector(".btn1").addEventListener("click", () => {
+    let box =document.querySelector(".box");
+    box.classList.add("changeColor");
+    console.log(box.classList);
+})
+// toggle
+document.querySelector(".btn2").addEventListener("click", () => {
+    let box2 = document.querySelector(".box");
+    box2.classList.toggle("changeColor1");
+    console.log(box2.classList);
+    console.log("hello");
+})
+// create div element
+const div = document.createElement("div");
+div.id = "main";
+div.classList.add("divTest");
+console.log(div.classList)
+document.querySelector(".btn3").addEventListener("click", ()=> {
+    let changeColor2 = document.querySelector("")
+    let textnote = document.createTextNode("Hello, How are you?");
+    console.log(textnote);
+    console.log("hi");
+})
