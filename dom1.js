@@ -88,8 +88,16 @@ div.id = "main";
 div.classList.add("divTest");
 console.log(div.classList)
 document.querySelector(".btn3").addEventListener("click", ()=> {
-    let changeColor2 = document.querySelector("")
+    let changeColor2 = document.querySelector(".box");
+    changeColor2.classList.toggle("divTest1");
+    let changeColor3 = document.querySelector(".box");
+    // changeColor3.classList.toggle("divTest1");
     let textnote = document.createTextNode("Hello, How are you?");
+    div.appendChild(textnote);
+    changeColor3.appendChild(div);
+    textnote.remove;
+    // changeColor3.remove(textnote);
+    
     console.log(textnote);
     console.log("hi");
 })
