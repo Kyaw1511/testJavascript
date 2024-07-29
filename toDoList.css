@@ -56,7 +56,6 @@
     cursor: pointer;
     font-size: 36px;
     padding-top: 2px;
-    color: #117a65;
 }
 .tasks {
     width: 100%;
@@ -67,12 +66,17 @@
     align-items: center;
 }
 .tasks .task {
-    min-height: 400px;
+    border: 2px solid saddlebrown;
+    border-radius: 10px;
+    width: 30%;
     display: flex;
     justify-content: space-between;
     background-color: #117a65;
-    color: #CD853F;
-    padding: 20px 10px;
+    color: #dcdbd9;
+    padding: 14px 10px;
+    font-size: 20px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
 }
 .tasks .task i {
     font-size: 22px;
@@ -84,9 +88,25 @@
         top: 10px;
     }
     .container h2 {
-        font-size: 24px;
+        font-size: 20px;
     }
     .container .input-box {
-        width: 80%;
+        width: 90%;
     }
+    .container .input-box input {
+        /* border: 2px solid gray; */
+        font-size: 16px;
+    };
+    .tasks {
+        width: 100%;
+    }
+    .tasks .task {
+        border: 2px solid green;
+        border-radius: 8px;
+        width: 75%;
+        font-size: 16px;
+        padding: 10px;
+        
+    }
+
 }
