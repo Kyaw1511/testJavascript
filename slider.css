@@ -44,7 +44,7 @@ section h2 {
     position: absolute;
     top: 0;
     left: 0;
-    transition: 3s ease-in-out;
+    transition: 1ms ease-in-out;
 }
 .img-container img.active {
     width: 100% !important;
