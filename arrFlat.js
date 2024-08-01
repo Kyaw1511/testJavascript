@@ -14,23 +14,25 @@ for(let i = 0; i < arr.length; i++) {
     array.innerHTML += `${arr[i]} <br>`;
     console.log(arr[i]);
 }
-for(
-    let z = 0; z < arry.length; z++
-) {
-    for(
-        let b = 0; b < arry[z].length; b++
-    ) {
-        for(
-            let c = 0; c < arry[b].length; c++
-        ) {
-            array4.innerHTML = `${arry}`;
-            console.log(arry[c])
-        }
-    } 
+
+// for(
+//     let z = 0; z < arry.length; z++
+// ) {
+//     for(
+//         let b = 0; b < arry[z].length; b++
+//     ) {
+//         for(
+//             let c = 0; c < arry[b].length; c++
+//         ) {
+//             array4.innerHTML = `${arry}`;
+//             console.log(arry[c])
+//         }
+//     } 
     
-}
+// }
 let newArr = arr.flat();
 let newArr1 = arry.flat();
 array3.innerText = newArr;
 array5.innerHTML = newArr1;
+console.log("hello")
 console.log(newArr);

@@ -4,17 +4,26 @@ let text = "";
 
 
 fetch("https://reqres.in/api/users")
-// fetch("https://jsonplaceholder.typicode.com/posts")
-.then(ans => ans.json())
-// .then(data => console.log(data[0]))
-// .then(data => apiTest.innerHTML += data[0].category)
-.then(db => {
+.then(answer => answer.json())
+.then(data => {
     for(let i = 0; i < data.length; i++) {
-        data[i].data.forEach(function(item) {
-            console.log(item);
-        })
+        text += `<td>${data.data[2].email}</td> <br>`;
     }
-})
+    console.log(text)
+});
 
+async function fetchDataRequ() {
+    let data = await fetch("https://reqres.in/api/users");
+    let firstname = await data.json();
+    
+    console.log(firstname.data[2].first_name);
+}
+fetchDataRequ();
 
-
+// for(let i = 0; i < arr.length; i++) {
+//     for(let x = 0; x < arr[i].length; x++) {
+//         array2.innerHTML += `Array ${i} of ${x} ==> ${arr[i][x]} <br>`;
+//     }
+//     array.innerHTML += `${arr[i]} <br>`;
+//     console.log(arr[i]);
+// }
