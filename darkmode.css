@@ -94,3 +94,17 @@ a {
     margin-right: 12px;
     color: var(--dark-text);
 }
+
+/* mobile section */
+@media (max-width: 576) {
+    .container {
+        width: 90%;
+    }
+    
+    .nav, .nav-item {
+        flex-direction: column;
+    }
+    .nav-item {
+        display: none;
+    }
+}
