@@ -165,6 +165,9 @@ a {
         font-weight: 900px;
     }
     .test {
-        display: block;
+        display: inline-block;
+    }
+    .test1 {
+        display: inline-block;
     }
 }
