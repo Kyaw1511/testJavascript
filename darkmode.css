@@ -126,9 +126,9 @@ a {
         right: 40%;
         letter-spacing: 2px;
     }
-    .nav {
-        display: inline-block;
-    }
+    /* .nav {
+        display: block;
+    } */
     .navbar {
         /* border: 2px solid red; */
         display: flex;
@@ -169,8 +169,5 @@ a {
     .test li  {
         border: 2px solid green;
         padding: 8px;
-    }
-    .hide {
-        display: none;
     }
 }

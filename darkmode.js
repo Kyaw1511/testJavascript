@@ -24,10 +24,13 @@ hamburger.addEventListener('click', () => {
 
     function toggleOn() {
         navMenu.classList.add("test");
+        // navMenu.style.display = "none";
         test1 = true;
     }
     function toggleOff() {
-        navMenu.classList.add("hide");
+        // navMenu.classList.remove("test");
+        // navMenu.classList.add("test");
+        navMenu.style.display = "none"
         test1 = false;
     }
     
