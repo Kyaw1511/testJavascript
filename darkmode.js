@@ -4,15 +4,31 @@ const toggle = document.querySelector("#toggle-btn");
 const icon = document.querySelector("#toggle_icon");
 
 hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('hide');
+    // navMenu.classList.toggle('hide');
     // navMenu.classList.add("test");
 
-    let test = document.querySelector(".test");
-    if(test) {
-        navMenu.classList.add("test");
+    // let test = document.querySelector(".test");
+    // if(test) {
+    //     navMenu.classList.add("test");
+    // }
+    // else {
+    //     navMenu.classList.remove("test");
+    // }
+    let test1 = false;
+    if(test1) {
+        toggleOn();
     }
     else {
-        navMenu.classList.remove("test");
+        toggleOff();
+    }
+
+    function toggleOn() {
+        navMenu.classList.add("test");
+        test1 = true;
+    }
+    function toggleOff() {
+        navMenu.classList.add("hide");
+        test1 = false;
     }
     
     console.log("Hi")
