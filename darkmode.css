@@ -126,9 +126,15 @@ a {
         right: 40%;
         letter-spacing: 2px;
     }
-    /* .nav {
+    #myLinks {
+        display: none;
+    }
+    .nav {
         display: block;
-    } */
+    }
+    .nav .nav-item {
+        display: block;
+    }
     .navbar {
         /* border: 2px solid red; */
         display: flex;
@@ -163,11 +169,16 @@ a {
         border: 2px solid sandybrown;
         display: flex;
         flex-direction: column;
-        position: fixed;
-        margin: 250px 0px 20px 0px;
+        position: absolute;
+        margin: 240px 0px 20px 0px;
+        z-index: 1;
     }
     .test li  {
         border: 2px solid green;
-        padding: 8px;
+        padding: 4px;
+    }
+    .test li a {
+        font-size: 10px !important;
+        /* color: black !important; */
     }
 }

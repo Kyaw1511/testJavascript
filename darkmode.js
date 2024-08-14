@@ -4,36 +4,14 @@ const toggle = document.querySelector("#toggle-btn");
 const icon = document.querySelector("#toggle_icon");
 
 hamburger.addEventListener('click', () => {
-    // navMenu.classList.toggle('hide');
-    // navMenu.classList.add("test");
-
-    // let test = document.querySelector(".test");
-    // if(test) {
-    //     navMenu.classList.add("test");
-    // }
-    // else {
-    //     navMenu.classList.remove("test");
-    // }
-    let test1 = false;
-    if(test1) {
-        toggleOn();
+    var x = document.getElementById("myLinks");
+    if(x.style.display === "block") {
+        x.style.display = "none";
+        x.classList.add("test");
     }
     else {
-        toggleOff();
+        x.style.display = "block";
     }
-
-    function toggleOn() {
-        navMenu.classList.add("test");
-        // navMenu.style.display = "none";
-        test1 = true;
-    }
-    function toggleOff() {
-        // navMenu.classList.remove("test");
-        // navMenu.classList.add("test");
-        navMenu.style.display = "none"
-        test1 = false;
-    }
-    
     console.log("Hi")
     console.log(navMenu);
 });
@@ -61,6 +39,7 @@ function darkModeOn() {
     darkMode = true;
     localStorage.setItem("darkMode", "enabled");
     icon.className = "bx bxs-moon";
+    navMenu.style.color = "#212f3d";
 }
 // call dark mode off
 function darkModeOff() {
@@ -68,4 +47,5 @@ function darkModeOff() {
     darkMode = false;
     localStorage.setItem("darkMode", null);
     icon.className = "bx bxs-sun";
+    navMenu.style.color = "#212f3d";
 }
