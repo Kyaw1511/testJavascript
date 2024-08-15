@@ -2,15 +2,17 @@ const hamburger = document.querySelector('.hamburger-menu');
 const navMenu = document.querySelector('.nav');
 const toggle = document.querySelector("#toggle-btn");
 const icon = document.querySelector("#toggle_icon");
+const x = document.getElementById("myLinks");
 
 hamburger.addEventListener('click', () => {
-    var x = document.getElementById("myLinks");
+    // var x = document.getElementById("myLinks");
     if(x.style.display === "block") {
         x.style.display = "none";
-        x.classList.add("test");
+        // x.classList.add("test");
     }
     else {
         x.style.display = "block";
+        // x.classList.add("test");
     }
     console.log("Hi")
     console.log(navMenu);
@@ -39,7 +41,6 @@ function darkModeOn() {
     darkMode = true;
     localStorage.setItem("darkMode", "enabled");
     icon.className = "bx bxs-moon";
-    navMenu.style.color = "#212f3d";
 }
 // call dark mode off
 function darkModeOff() {
@@ -47,5 +48,4 @@ function darkModeOff() {
     darkMode = false;
     localStorage.setItem("darkMode", null);
     icon.className = "bx bxs-sun";
-    navMenu.style.color = "#212f3d";
 }
