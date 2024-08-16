@@ -5,6 +5,7 @@ let people1 = {
     job : "Developer",
 
     biology : function () {
+        document.getElementById("test1").innerHTML = `${this.name} age is ${this.age}`;
         console.log(
             `${this.name}
              age is ${this.age}`)
@@ -12,3 +13,4 @@ let people1 = {
 }
 people1.biology();
 document.getElementById("test").innerHTML = people1.name;
+// document.getElementById("test1").innerHTML = people1.biology()
