@@ -74,7 +74,7 @@ section {
     letter-spacing: 1px;
 }
 #number, #special-char {
-    border: 2px solid saddlebrown;
+    /* border: 2px solid saddlebrown; */
     width: 28px;
 }
 #range {
@@ -102,4 +102,59 @@ section {
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
+}
+/* alert color */
+.alertYellow {
+    background-color: #387F39;
+}
+
+/* mobile view */
+@media(max-width: 576px) {
+    .container {
+        width: 90%;
+        height: 80vh;
+    }
+    .container h2 {
+        text-align: center;
+        font-size: 24px;
+        line-break: auto;
+        letter-spacing: 2.2px;
+        margin: 10px 20px 30px 20px;
+    }
+    .result {
+        /* border: 2px solid sienna; */
+        width: 85%;
+        height: 50px;
+    }
+    /* .res-text {
+        border: 2px solid seagreen;
+    } */
+    .result .copy {
+        font-size: 20px;
+        font-weight: 900;
+    }
+    .input-box {
+        /* border: 2px solid springgreen; */
+        width: 85%;
+        display: flex;
+        column-gap: 10px;
+        font-size: 20px;
+        margin: 6px auto;
+    }
+    .input-box #range {
+        width: 60%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .input-box .range-res {
+        margin: 0 auto;
+    }
+    .input-box label {
+        margin: 6px 0px;
+        font-size: 22px;
+    }
+    .generate {
+        width: 43%;
+        font-size: 20px;
+    }
 }

@@ -26,24 +26,31 @@ function generatePw() {
         for(let i = 0; i < length; i++) {
             newPw += strongest[Math.floor(Math.random() * strongest.length)];
         }
+        alert("Strong password generate!!");
     }
     else if(numCheck) {
         for(let i = 0; i < length; i++) {
             newPw += middle[Math.floor(Math.random() * middle.length)];
         }
+        alert("Your password generate is weak!");   
     }
     else if(charCheck) {
         for(let i = 0; i < length; i++) {
             newPw += strong[Math.floor(Math.random() * strong.length)];
         }
+        alert("Your password must be included number!");
     }else {
         for(let i = 0; i < length; i++) {
             newPw += middle[Math.floor(Math.random() * weak.length)];
         }
+        alert("Your password generate is too weak!!");
     }
 
     // display show pw
     display.value = newPw;
+    display.style.color = "#294B29";
+    // display.style.color = "#3C3D37"
+    display.style.fontWeight = "bold";
 
     // console 
     console.log("hello");
@@ -66,7 +73,8 @@ copy.addEventListener("click", () => {
         navigator.clipboard.writeText(display.value);
         alert("Copy Success!");
     }
-    
-    
     console.log("Copy");
 })
+
+// alert background color;
+
