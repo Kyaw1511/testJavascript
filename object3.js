@@ -82,3 +82,28 @@ obj2.add();
 obj2.sub();
 obj2.multi();
 obj2.division();
+
+// Object Oriented Programming -3;
+class car {
+    constructor(name) {
+        this.name = name;
+    }
+    drive() {
+        document.querySelector("#test7").innerHTML = "Boom Boom....";
+        console.log("Boom Boom ....");
+    }
+}
+class toyota extends car {
+    constructor(name, color) {
+        super(name);
+        this.color = color; 
+    }
+    bios2() {
+        document.querySelector("#test8").innerHTML = "This is white toyota car."
+        console.log("This is white toyota car.");
+    }
+}
+
+let obj3 = new toyota();
+obj3.bios2();
+obj3.drive();
