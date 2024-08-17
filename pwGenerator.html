@@ -1,0 +1,81 @@
+<!-- 
+    Start Date : 17-8-2024;
+    Test JavaScript
+    Tutor : WebHub Page.
+    lesson: 55;
+    password generator;
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta 
+            charset="UTF-8"
+        >
+        <meta 
+            name="viewport" 
+            content="width=device-width, initial-scale=1.0"
+        >
+        <meta 
+            name="description"
+            content="test JavaScript Lessons"
+        >
+        <meta
+            name="keywords"
+            content="test, JavaScript"
+        >
+        <meta
+            name="viewport"
+            content="width= device-width, initial-scale=1.0"
+        >
+        <!-- link css -->
+        <link rel="stylesheet" href="pwGenerator.css">
+        
+        <title>Document</title>
+
+    </head>
+    <body>
+        <section>
+            <div class="container">
+                <h2>password generator</h2>
+                <div class="result">
+                    <input 
+                        type="text"
+                        class="res-text"
+                    >
+                    <span class="copy">
+                        copy
+                    </span>
+                </div>
+                <div class="input-box">
+                    <input 
+                        type="range"
+                        min="5"
+                        max="25"
+                        id="range"
+                    >
+                    <div class="range-res">
+                        14
+                    </div>
+                </div>
+                <div class="input-box">
+                    <input 
+                        type="checkbox"
+                        id="number"
+                    >
+                    <label for="number">number</label>
+                </div>
+                <div class="input-box">
+                    <input 
+                        type="checkbox"
+                        id="special-char"
+                    >
+                    <label for="special-char">special character</label>
+                </div>
+                <button class="generate">generator</button>
+            </div>
+        </section>
+
+        <!-- script -->
+        <script src="pwGenerator.js"></script>
+    </body>
+</html>

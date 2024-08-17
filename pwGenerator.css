@@ -1,0 +1,105 @@
+/* password generator */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: whitesmoke;
+    background-size: cover;
+    background-position: center;
+}
+.container {
+    /* border: 2px solid sienna; */
+    width: 50%;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px;
+    border-radius: 10px;
+    background-color: #808D7C;
+}
+.container h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #F6E96B;
+    font-size: 28px;
+    margin: 0px 0px 20px 0px;
+}
+.result {
+    /* border: 2px solid slateblue; */
+    width: 60%;
+    height: 40px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.res-text {
+    width: 80%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: #333;
+}
+.res-text:focus {
+    outline: none;
+}
+.result .copy {
+    color: #A02334;
+    /* color: #FFAD60; */
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+.input-box {
+    width: 70%;
+    display: flex;
+    column-gap: 20px;
+    font-size: 20px;
+}
+.input-box label {
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+#number, #special-char {
+    border: 2px solid saddlebrown;
+    width: 28px;
+}
+#range {
+    /* border: 2px solid saddlebrown; */
+    width: 60%;
+    margin: 6px auto;
+    color: #387F39;
+}
+.range-res {
+    padding: 8px;
+    border: 2px solid #333;
+    border-radius: 6px;
+    width: 15%;
+    text-align: center;
+}
+.generate {
+    border: none;
+    border-color: #A02334;
+    padding: 10px;
+    margin: 10px;
+    font-size: 18px;
+    color: #387F39;
+    width: 25%;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
