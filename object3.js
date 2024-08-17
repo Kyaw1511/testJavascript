@@ -89,8 +89,8 @@ class car {
         this.name = name;
     }
     drive() {
-        document.querySelector("#test7").innerHTML = "Boom Boom....";
-        console.log("Boom Boom ....");
+        document.querySelector("#test7").innerHTML = this.name + " " + "Boom Boom....";
+        console.log(this.name + " " + "Boom Boom ....");
     }
 }
 class toyota extends car {
@@ -99,11 +99,11 @@ class toyota extends car {
         this.color = color; 
     }
     bios2() {
-        document.querySelector("#test8").innerHTML = "This is white toyota car."
-        console.log("This is white toyota car.");
+        document.querySelector("#test8").innerHTML = "This is " + this.color + " " + "color toyota car.";
+        console.log("This is " + this.color + " " + "color toyota car.");
     }
 }
 
-let obj3 = new toyota();
+let obj3 = new toyota("markII", "blue");
 obj3.bios2();
 obj3.drive();
