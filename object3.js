@@ -44,3 +44,41 @@ console.log(typeof(human1));
 // private
 // Protected
 // Static
+
+class calc {
+    constructor(num1, num2) {
+        this.num1 = num1;
+        this.num2 = num2;
+    }
+    add() {
+        document.querySelector("#test3").innerHTML = `
+            Add two numbers = ${this.num1 + this.num2}`;
+        console.log(`Add two numbers = ${this.num1 + this.num2}`);
+    }
+    sub() {
+        document.querySelector("#test4").innerHTML = `
+            Subtract two numbers = ${this.num1 - this.num2}`;
+        console.log(`Subtract two numbers = ${this.num1 - this.num2}`);
+    }
+    multi() {
+        document.querySelector("#test5").innerHTML = `
+            Multiple of two numbers = ${this.num1 * this.num2}`;
+        console.log(`Multiple of two numbers = ${this.num1 * this.num2}`);
+    }
+    division() {
+        document.querySelector("#test6").innerHTML = `
+            Division of two numbers = ${this.num1 / this.num2}`;
+        console.log(`Division of two numbers = ${this.num1 / this.num2}`);
+    }
+}
+let obj = new calc(100,20);
+obj.add();
+obj.sub();
+obj.multi();
+obj.division();
+
+let obj2 = new calc(30, 3);
+obj2.add();
+obj2.sub();
+obj2.multi();
+obj2.division();
