@@ -70,7 +70,7 @@ header nav ul li a:hover {
 }
 
 /* max-width 756px */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     header nav {
         position: fixed;
         top: -1000px;
@@ -94,7 +94,7 @@ header nav ul li a:hover {
         display: inline;
     }
     .nav-active {
-        top: 70px !important;
+        top: 80px !important;
     }
 }
 main {
@@ -278,7 +278,7 @@ main {
     margin: 10px 0;
 }
 
-@media screen and (max-width : 900px){
+/* @media screen and (max-width : 900px){
     #popular .movie-container{
         width: 90%;
         grid-template-columns: 1fr 1fr;
@@ -290,7 +290,7 @@ main {
         width: 95%;
         grid-template-columns: 1fr;
     }
-}
+} */
 
 /* .loader{
     width: 100%;
@@ -303,10 +303,14 @@ main {
     top: 0;
     left: 0;
     z-index: 10000;
-
+}
+.load-child{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    animation: load-animate 1s linear alternate infinite;
 } */
-
-    /*  */
 
 /* @keyframes load-animate{
     0%{
