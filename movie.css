@@ -108,7 +108,24 @@ header nav ul li a:hover {
         top: -10px !important;
         border: 2px solid green;
     }
+    #landing {
+        width: 100%;
+        min-height: 70vh;
+        position: relative; 
+    }
+    #landing img {
+        /* border: 2px solid green; */
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 100% !important;
+        height: 88vh;
+        object-fit: contain;
+        object-position: center;
+    }
 }
+
 main {
     margin-top: 80px;
 }
@@ -120,7 +137,7 @@ main {
     height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 20px;
+    padding: 2px;
     z-index: 2;
     background-color: var(--primary-color);
     border-radius: 20px;
@@ -130,9 +147,10 @@ main {
     top: 85px !important;
 }
 .setting-box img {
-    width: 150px;
-    height: 100px;
+    width: 120px;
+    height: 160px;
     padding: 10px;
+    border-radius: 2px;
 }
 #landing {
     width: 100%;
@@ -140,12 +158,12 @@ main {
     position: relative; 
 }
 #landing img {
-    border: 2px solid green;
+    /* border: 2px solid green; */
     position: absolute;
     top: 0;
     left: 0;
     z-index: 0;
-    width: 68vh;
+    width: 70vh;
     height: 88vh;
     object-fit: contain;
     object-position: center;

@@ -1,6 +1,8 @@
 
 const menuToggle = document.querySelector("#menu-toggle");
-const SettingToggle = document.querySelector("#setting-toggle");
+const settingToggle = document.querySelector("#setting-toggle");
+const settingSun = document.querySelector("#settingSun");
+const navMenu = document.querySelector("#nav-menu");
 const images = Array.from(document.querySelectorAll(".setting-box img"));
 const landingImg = document.querySelector(".landing-image");
 
@@ -11,7 +13,7 @@ menuToggle.addEventListener("click", () => {
 })
 
 // Setting Toggle
-SettingToggle.addEventListener("click", () => {
+settingToggle.addEventListener("click", () => {
     let settingBox = document.querySelector(".setting-box");
     settingBox.classList.toggle("setting-box-active");
 })
@@ -30,3 +32,22 @@ images.map((image) => {
     })
 })
 console.log(images);
+
+// darkmode change
+settingSun.addEventListener("click", () => {
+    let darkMode = true;
+    if(darkMode) {
+        darkModeOff();
+    }
+    else {
+        darkModeOn();
+    }
+    console.log("Hello");
+})
+function darkModeOff() {
+    document.body.classList.remove("dark");
+    darkMode = false;
+}
+function darkModeOn() {
+    document.body.classList.add("dark");
+}
