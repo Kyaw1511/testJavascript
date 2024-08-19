@@ -4,6 +4,7 @@
     --primary-color : #ffd900;
     --secondary-color : #ffd9008f;
     --bg-color : #f4f4f4;
+    --dark-bg : rgb(7, 10, 46);
     --text-color : #333;
     --heading-size : 2.5rem;
     --sub-heading-size : 2rem;
@@ -68,7 +69,13 @@ header nav ul li a:hover {
 #menu-toggle {
     display: none;
 }
-
+.dark {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+.searchText {
+    color: #f4f4f4 !important;
+}
 /* max-width 756px */
 @media screen and (max-width: 768px) {
     header nav {
@@ -123,6 +130,9 @@ header nav ul li a:hover {
         height: 88vh;
         object-fit: contain;
         object-position: center;
+    }
+    .search h1 {
+        color: var(--bg-color) !important;
     }
 }
 

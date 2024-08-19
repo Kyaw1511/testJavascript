@@ -5,6 +5,8 @@ const settingSun = document.querySelector("#settingSun");
 const navMenu = document.querySelector("#nav-menu");
 const images = Array.from(document.querySelectorAll(".setting-box img"));
 const landingImg = document.querySelector(".landing-image");
+const icon = document.querySelector("#toggle-icon");
+const searchText = document.querySelector(".word")
 
 // Menu Toggle
 menuToggle.addEventListener("click", () => {
@@ -34,8 +36,9 @@ images.map((image) => {
 console.log(images);
 
 // darkmode change
+let darkMode = false;
 settingSun.addEventListener("click", () => {
-    let darkMode = true;
+    
     if(darkMode) {
         darkModeOff();
     }
@@ -47,7 +50,13 @@ settingSun.addEventListener("click", () => {
 function darkModeOff() {
     document.body.classList.remove("dark");
     darkMode = false;
+    icon.className = "bx bxs-moon";
+    searchText.className = "searchText";
+    // searchText.classList.add = "searchText";
 }
 function darkModeOn() {
     document.body.classList.add("dark");
+    darkMode = true;
+    icon.className = "bx bxs-sun";
+    // searchText.classList.remove = "searchText";
 }
