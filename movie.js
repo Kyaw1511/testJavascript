@@ -36,27 +36,36 @@ images.map((image) => {
 console.log(images);
 
 // darkmode change
-let darkMode = false;
-settingSun.addEventListener("click", () => {
-    
-    if(darkMode) {
+settingSun.addEventListener("click", darkModeToggle);
+let darkMode = localStorage.getItem("darkMode");
+
+// darkMode check 
+if(darkMode === "enabled") {
+    darkModeOn();
+}
+function darkModeToggle() {
+    darkMode = localStorage.getItem("darkMode");
+    if(darkMode === "enabled") {
         darkModeOff();
     }
     else {
-        darkModeOn();
+        darkModeOn()
     }
-    console.log("Hello");
-})
+}
+// call dark mode off
 function darkModeOff() {
     document.body.classList.remove("dark");
     darkMode = false;
-    icon.className = "bx bxs-moon";
+    localStorage.setItem("darkMode", null);
+    icon.className = "bx bxs-sun";
     searchText.className = "searchText";
     // searchText.classList.add = "searchText";
 }
+// call dark mode on
 function darkModeOn() {
     document.body.classList.add("dark");
     darkMode = true;
-    icon.className = "bx bxs-sun";
+    localStorage.setItem("darkMode", "enabled");
+    icon.className = "bx bxs-moon";
     // searchText.classList.remove = "searchText";
 }
