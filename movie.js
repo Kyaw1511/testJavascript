@@ -57,8 +57,9 @@ function darkModeOff() {
     document.body.classList.remove("dark");
     darkMode = false;
     localStorage.setItem("darkMode", null);
-    icon.className = "bx bxs-sun";
+    icon.className = "bx bxs-moon";
     searchText.className = "searchText";
+    // document.body.classList.remove = "searchText";
     // searchText.classList.add = "searchText";
 }
 // call dark mode on
@@ -66,6 +67,8 @@ function darkModeOn() {
     document.body.classList.add("dark");
     darkMode = true;
     localStorage.setItem("darkMode", "enabled");
-    icon.className = "bx bxs-moon";
+    icon.className = "bx bxs-sun";
+    searchText.className = "searchText";
+    // document.body.classList.add = "searchText";
     // searchText.classList.remove = "searchText";
 }
