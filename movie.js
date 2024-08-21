@@ -7,6 +7,8 @@ const images = Array.from(document.querySelectorAll(".setting-box img"));
 const landingImg = document.querySelector(".landing-image");
 const icon = document.querySelector("#toggle-icon");
 const searchText = document.querySelector(".word")
+const headerSec = document.getElementById("headerSec");
+const scrollTopArr = document.querySelector(".scroll-top");
 
 // Menu Toggle
 menuToggle.addEventListener("click", () => {
@@ -33,7 +35,7 @@ images.map((image) => {
         console.log(image.src);
     })
 })
-console.log(images);
+
 
 // darkmode change
 settingSun.addEventListener("click", darkModeToggle);
@@ -72,3 +74,27 @@ function darkModeOn() {
     // document.body.classList.add = "searchText";
     // searchText.classList.remove = "searchText";
 }
+
+// scroll function
+window.addEventListener("scroll", scrollingY);
+function scrollingY() {
+    if(window.scrollY > 200) {
+        headerSec.style.backgroundColor = "#f4f4f4";
+        headerSec.style.color = "#080808";
+        scrollTopArr.style.bottom = "20px";
+        console.log("Hello scroll Y");
+    }
+    else {
+        headerSec.style.backgroundColor = "#ffd900";
+        headerSec.style.color = "#080808";
+        scrollTopArr.style.bottom = "-100px";
+    }
+}
+scrollTopArr.addEventListener("click", () => {
+    window.scroll(0, 0);
+    console.log("press scroll y arrow");
+})
+
+// console portions
+console.log(window.scrollY);
+console.log(images);

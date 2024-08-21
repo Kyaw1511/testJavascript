@@ -23,7 +23,8 @@ body {
 }
 p,a {
     font-size: var(--text-size);
-    line-height: 12;
+    /* line-height: 12; */
+    line-height: 1;
 }
 a {
     text-decoration: none;
@@ -76,6 +77,14 @@ header nav ul li a:hover {
 .searchText {
     /* color: #f4f4f4 !important; */
     color: yellow !important;
+}
+#testPara {
+    border: 2px solid green;
+    margin-top: 60px;
+    text-indent: 80px;
+    padding: 10px;
+    line-height: 1.4;
+    text-align: justify;
 }
 /* max-width 756px */
 @media screen and (max-width: 768px) {
@@ -139,6 +148,7 @@ header nav ul li a:hover {
 }
 
 main {
+    /* border: 2px solid green; */
     margin-top: 80px;
 }
 .setting-box {
@@ -184,17 +194,17 @@ main {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 0;
+    z-index: 1;
     width: 100%;
     height: 100%;
-    z-index: 1;
     background-color: rgba(0, 0, 0, 623);
 }
 .scroll-top {
+    border: 2px solid green !important;
     position: fixed;
     right: 10px;
     bottom: -100px;
-    z-index: 100;
+    z-index: 10;
     background-color: var(--primary-color);
     width: 40px;
     height: 40px;
