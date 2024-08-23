@@ -101,6 +101,14 @@ scrollTopArr.addEventListener("click", () => {
     console.log("press scroll y arrow");
 })
 
+// fetch movie
+const url = {
+    apiKey : "[yourkey]&",
+    baseUrl : "http://www.omdbapi.com/?",
+}
+const siteUrl = url.baseUrl+url.apiKey;
+
 // console portions
 console.log(window.scrollY);
 console.log(images);
+console.log(siteUrl);
