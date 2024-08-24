@@ -103,12 +103,68 @@ scrollTopArr.addEventListener("click", () => {
 
 // fetch movie
 const url = {
-    apiKey : "[yourkey]&",
-    baseUrl : "http://www.omdbapi.com/?",
+    apiKey : "api_key=f98bf3c4437317262eb8c464167edf4d",
+    baseUrl : "https://api.themoviedb.org/3/discover/movie?",
 }
-const siteUrl = url.baseUrl+url.apiKey;
+const imgUrl = "https://image.tmdb.org/t/p/w500/";
+const popularUrl = url.baseUrl+ "sort_by=popularity.desc&" + url.apiKey;
+
+// movie path;
+fetchMovie(popularUrl);
+function fetchMovie(path) {
+    fetch(path)
+    .then(res => res.json())
+    .then(data => showMovie(data))
+}
+function showMovie(data) {
+    let resMovie = data.results;
+    // annymonus function for movie foreach => another way;
+    // resMovie.forEach(movie => {
+    //     console.log(movie.original_title);
+    // })
+    resMovie.forEach(displayMovie);
+    function displayMovie(movie) {
+
+        // card for loop 
+        const divCard = document.createElement("div");
+        divCard.className = "card";
+        divCard.innerHTML = `
+            <div class="img-box">
+                <img src="${imgUrl + movie.poster_path}" alt="">
+            </div>
+
+            <div class="details">
+                <h3>${movie.original_title}</h3>
+                <span>${movie.vote_average.toFixed(2)}</span>
+            </div>
+            <div class="overview">
+                <h5>overview</h5>
+                <p>
+                    ${movie.overview}
+                </p>
+                <p>
+                    release date : <strong>${movie.release_date}</strong>
+                </p>
+            </div>   
+        `;
+        document.querySelector(".movie-container").appendChild(divCard);
+
+        // console.log("displayFunction");
+        console.log(movie.original_title);
+    }
+
+    // console portions
+    console.log(resMovie);
+    console.log(data.results[0]);
+    console.log(data.results[0].title);
+    console.log(data.results[1]);
+    console.log(data.results[1].title);
+    console.log(data.results[2]);
+    console.log(data.results[2].title);
+    console.log(data);
+}
 
 // console portions
 console.log(window.scrollY);
 console.log(images);
-console.log(siteUrl);
+console.log(popularUrl);

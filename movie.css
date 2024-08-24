@@ -78,14 +78,7 @@ header nav ul li a:hover {
     /* color: #f4f4f4 !important; */
     color: yellow !important;
 }
-#testPara {
-    border: 2px solid green;
-    margin-top: 60px;
-    text-indent: 80px;
-    padding: 10px;
-    line-height: 1.4;
-    text-align: justify;
-}
+
 /* max-width 756px */
 @media screen and (max-width: 768px) {
     header nav {
