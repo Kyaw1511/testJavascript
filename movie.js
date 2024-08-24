@@ -29,7 +29,20 @@ images.map((image) => {
         images.forEach((img) => {
             img.style.opacity = "1";
         })
-        landingImg.src = image.src;
+        // landingImg.src = image.src;
+        // sixSettingMovie.forEach(landImg);
+        // function landImg(movie) {
+        //     const secImg = document.createElement("section");
+        //     secImg.className = "landing-image";
+        //     secImg.innerHTML = `
+        //         <img 
+        //             src="${imgUrl + movie.poster_path}" 
+        //             alt="images 1"
+        //         >
+        //     `;
+        //     document.querySelector(".landing-container").appendChild(secImg)
+        //     landingImg.src = `${imgUrl + movie.poster_path}`;
+        // }
         image.style.opacity = "0.5";
 
         console.log(image);
@@ -146,7 +159,7 @@ function showMovie(data) {
                 <p>
                     release date : <strong>${movie.release_date}</strong>
                 </p>
-            </div>   
+            </div>
         `;
         document.querySelector(".movie-container").appendChild(divCard);
 
@@ -157,12 +170,12 @@ function showMovie(data) {
     }
     // slice 5 array;
     let settingMovie = resMovie
-    let sixSettingMovie = settingMovie.slice(0,6);
+    let sixSettingMovie = settingMovie.slice(0,5);
     sixSettingMovie.forEach(showSixMovie);
     function showSixMovie(movie) {
         // setting movie for loop ;
         const divSetting = document.createElement("div");
-        divSetting.className = "setting-box";
+        divSetting.className = "setting-container";
         divSetting.innerHTML = `
             <div>
                 <img 
@@ -170,9 +183,21 @@ function showMovie(data) {
                     alt="images 1"
                 >
             </div>
-            
         `;
-        document.querySelector(".setting-container").appendChild(divSetting);
+        document.querySelector(".setting-box").appendChild(divSetting);
+        images.map((image) => {
+            image.addEventListener("click", () => {
+                images.forEach((img) => {
+                    img.style.opacity = "1";
+                })
+                // landingImg.src = image.src;
+                landingImg.src = `${imgUrl + movie.poster_path}`;
+                image.style.opacity = "0.5";
+        
+                console.log(image);
+                console.log(image.src);
+            })
+        })   
     }
     console.log(sixSettingMovie);
 
