@@ -173,7 +173,7 @@ main {
     position: relative; 
 }
 #landing img {
-    /* border: 2px solid green; */
+    border: 2px solid green;
     position: absolute;
     top: 0;
     left: 0;
@@ -249,15 +249,15 @@ main {
     color: var(--text-color); 
     text-transform: uppercase;
     letter-spacing: 3px;
-    margin-top: 20px;
+    margin-top: 200px;
 }
 #popular .movie-container {
-    /* border: 2px solid saddlebrown; */
+    border: 2px solid saddlebrown;
     width: 80%;
     height: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    grid-gap: 30px;
 }
 #popular .movie-container .card {
     /* border: 2px solid aqua; */

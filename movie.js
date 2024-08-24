@@ -20,6 +20,7 @@ menuToggle.addEventListener("click", () => {
 settingToggle.addEventListener("click", () => {
     let settingBox = document.querySelector(".setting-box");
     settingBox.classList.toggle("setting-box-active");
+    
 })
 
 // Setting box image
@@ -151,17 +152,47 @@ function showMovie(data) {
 
         // console.log("displayFunction");
         console.log(movie.original_title);
+        console.log(movie.vote_average);
+        console.log(typeof(movie.vote_average));
     }
+    // slice 5 array;
+    let settingMovie = resMovie
+    let sixSettingMovie = settingMovie.slice(0,6);
+    sixSettingMovie.forEach(showSixMovie);
+    function showSixMovie(movie) {
+        // setting movie for loop ;
+        const divSetting = document.createElement("div");
+        divSetting.className = "setting-box";
+        divSetting.innerHTML = `
+            <div>
+                <img 
+                    src="${imgUrl + movie.poster_path}" 
+                    alt="images 1"
+                >
+            </div>
+            
+        `;
+        document.querySelector(".setting-container").appendChild(divSetting);
+    }
+    console.log(sixSettingMovie);
 
     // console portions
     console.log(resMovie);
+    console.log(typeof(resMovie));
+    console.log(Array.isArray(resMovie));
+    console.log(resMovie[1].vote_average);
+    
     console.log(data.results[0]);
     console.log(data.results[0].title);
     console.log(data.results[1]);
     console.log(data.results[1].title);
     console.log(data.results[2]);
     console.log(data.results[2].title);
+    // console.log(find(resMovie[0,1].vote_average));
     console.log(data);
+    console.log("5");
+    console.log(resMovie.length);
+    
 }
 
 // console portions
