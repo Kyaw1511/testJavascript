@@ -3,7 +3,7 @@ const menuToggle = document.querySelector("#menu-toggle");
 const settingToggle = document.querySelector("#setting-toggle");
 const settingSun = document.querySelector("#settingSun");
 const navMenu = document.querySelector("#nav-menu");
-const images = Array.from(document.querySelectorAll(".setting-box img"));
+const images = Array.from(document.querySelectorAll(".setting-container img"));
 const landingImg = document.querySelector(".landing-image");
 const icon = document.querySelector("#toggle-icon");
 const searchText = document.querySelector(".word")
@@ -28,7 +28,29 @@ images.map((image) => {
     image.addEventListener("click", () => {
         images.forEach((img) => {
             img.style.opacity = "1";
+            // let landingImages = Array.from(sixSettingMovie)
+            // console.log(landingImages);
         })
+            landingImg.src = image.src;
+            
+            // let landingImages = resMovie;
+            // landingImages.forEach(landImges);
+            // function landImges(movie) {
+            //     // landing movie poster for loop;
+            //     const secLanding = document.createElement("section");
+            //     secLanding.className = "landImg";
+            //     secLanding.innerHTML = `
+            //         <div class="landImg">
+            //             <img 
+            //                 src="${imgUrl + movie.poster_path}" 
+            //                 alt=""
+            //                 class="landing-image"
+            //             >
+            //         </div>
+            //     `;
+            //     document.querySelector(".landing-container").appendChild(secLanding);
+            // }
+        
         // landingImg.src = image.src;
         // sixSettingMovie.forEach(landImg);
         // function landImg(movie) {
@@ -185,13 +207,16 @@ function showMovie(data) {
             </div>
         `;
         document.querySelector(".setting-box").appendChild(divSetting);
+        
         images.map((image) => {
             image.addEventListener("click", () => {
+                document.querySelector(".landing-container").appendChild(divSetting);
                 images.forEach((img) => {
                     img.style.opacity = "1";
+                    landingImg.src = img.src;
                 })
                 // landingImg.src = image.src;
-                landingImg.src = `${imgUrl + movie.poster_path}`;
+                // landingImg.src = `${imgUrl + movie.poster_path}`;
                 image.style.opacity = "0.5";
         
                 console.log(image);
@@ -200,6 +225,7 @@ function showMovie(data) {
         })   
     }
     console.log(sixSettingMovie);
+    console.log(sixSettingMovie[0].title);
 
     // console portions
     console.log(resMovie);
