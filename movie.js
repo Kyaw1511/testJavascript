@@ -6,10 +6,10 @@ const navMenu = document.querySelector("#nav-menu");
 const images = Array.from(document.querySelectorAll(".setting-container img"));
 const landingImg = document.querySelector(".landing-image");
 const icon = document.querySelector("#toggle-icon");
-const searchText = document.querySelector(".word")
+const searchText = document.querySelector(".word");
 const headerSec = document.getElementById("headerSec");
 const scrollTopArr = document.querySelector(".scroll-top");
-
+const searchMovie = document.querySelector("#searchMovie");
 // Menu Toggle
 menuToggle.addEventListener("click", () => {
     let navMenu = document.querySelector("#nav-menu");
@@ -144,6 +144,7 @@ const url = {
 }
 const imgUrl = "https://image.tmdb.org/t/p/w500/";
 const popularUrl = url.baseUrl+ "sort_by=popularity.desc&" + url.apiKey;
+const searchUrl = "https://api.themoviedb.org/3/search/movie?" + url.apiKey;
 
 // movie path;
 fetchMovie(popularUrl);
@@ -154,6 +155,7 @@ function fetchMovie(path) {
 }
 function showMovie(data) {
     let resMovie = data.results;
+    document.querySelector(".movie-container").innerHTML = "";
     // annymonus function for movie foreach => another way;
     // resMovie.forEach(movie => {
     //     console.log(movie.original_title);
@@ -224,10 +226,24 @@ function showMovie(data) {
             })
         })   
     }
-    console.log(sixSettingMovie);
-    console.log(sixSettingMovie[0].title);
+
+    // search Movie
+    searchMovie.addEventListener("keypress", (e) => {
+        if(e.keyCode === 13) {
+            let val = e.target.value;
+            if(val) {
+                fetchMovie(searchUrl+"&query="+val);
+            }
+            else {
+                fetchMovie(popularUrl);
+            }
+        }
+        console.log(e.keyCode);
+    })
 
     // console portions
+    console.log(sixSettingMovie);
+    console.log(sixSettingMovie[0].title);
     console.log(resMovie);
     console.log(typeof(resMovie));
     console.log(Array.isArray(resMovie));
