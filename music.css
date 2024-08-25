@@ -13,7 +13,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #111;
+    background-color: #ccd1d1;
 }
 section {
     width: 100%;
@@ -25,7 +25,7 @@ section {
     width: 350px;
     height: 500px;
     border-radius: 20px;
-    background-color: #141414;
+    background-color: #16a085;
     display: flex;
     flex-direction: column;
     row-gap: 14px;
@@ -40,6 +40,12 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: start;
+}
+.container .nav p {
+    color: #333;
+}
+.container .nav span {
+    color: #333;
 }
 .container .nav i {
     color: var(--primary-color);
@@ -82,15 +88,16 @@ section {
 .container h1 {
     text-transform: uppercase;
     letter-spacing: 1.4;
-    color: #f4f4f4;
+    color: #333;
     font-size: 25px;
 }
 .container p {
-    color: #ccc;
+    color: #333;
     font-size: 20px;
+    font-weight: bolder;
 }
 .container img {
-    width: 90%;
+    width: 80%;
     height: 40%;
 }
 .btn-container {
@@ -104,8 +111,9 @@ section {
     color: var(--primary-color);
 }
 #range {
-    width: 80%;
+    width: 60%;
     height: 4px;
+    /* background-color: var(--primary-color) !important; */
 }
 
 /* chrome */

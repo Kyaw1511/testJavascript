@@ -30,30 +30,43 @@
             <div class="container">
                 <div class="nav">
                     <p>
-                        <span id="current"></span>
+                        <span id="current"></span> /
                         <span id="count"></span>
                     </p>
                     <i class="fa-solid fa-bars"></i>
                 </div>
                 <ul id="nav-list">
-                    <li>
+                    <!-- <li>
                         <div>
                             <h3>music tilte 1</h3>
                             <p>singer</p>
                         </div>
                         <i class="fa-solid fa-play"></i>
-                    </li>
+                    </li> -->
                 </ul>
                 <h1 id="title">music title 3</h1>
                 <p id="singer">artist</p>
                 <img 
+                    id="poster"
                     src="images/song1.jpg" 
                     alt="song1">
                 <div class="btn-container">
-                    <i class="fa-solid fa-caret-left"></i>
-                    <i class="fa-solid fa-circle-play"></i>
+                    <i
+                        id="prev" 
+                        class="fa-solid fa-caret-left"
+                    >
+                    </i>
+                    <i
+                        id="play" 
+                        class="fa-solid fa-circle-play"
+                    >
+                    </i>
                     <!-- <i class="fa-solid fa-pause"></i> -->
-                    <i class="fa-solid fa-caret-right"></i>
+                    <i
+                        id="next" 
+                        class="fa-solid fa-caret-right"
+                    >
+                    </i>
                 </div>
                 <input 
                     type="range"
