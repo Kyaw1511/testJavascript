@@ -356,7 +356,7 @@ main {
     }
 }
 
-/* .loader{
+.loader{
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -374,9 +374,9 @@ main {
     border-radius: 20px;
     background-color: var(--primary-color);
     animation: load-animate 1s linear alternate infinite;
-} */
+}
 
-/* @keyframes load-animate{
+@keyframes load-animate{
     0%{
         transform: rotate(90deg);
     }
@@ -386,4 +386,4 @@ main {
     50%{
         transform: rotate(360deg);
     }
-} */
+}

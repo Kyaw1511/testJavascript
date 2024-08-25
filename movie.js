@@ -10,6 +10,8 @@ const searchText = document.querySelector(".word");
 const headerSec = document.getElementById("headerSec");
 const scrollTopArr = document.querySelector(".scroll-top");
 const searchMovie = document.querySelector("#searchMovie");
+const loader = document.querySelector(".loader");
+
 // Menu Toggle
 menuToggle.addEventListener("click", () => {
     let navMenu = document.querySelector("#nav-menu");
@@ -240,6 +242,12 @@ function showMovie(data) {
         }
         console.log(e.keyCode);
     })
+
+    // loader 
+    window.addEventListener("load", () => {
+        loader.style.display = "none";
+    })
+
 
     // console portions
     console.log(sixSettingMovie);
