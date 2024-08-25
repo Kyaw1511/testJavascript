@@ -13,7 +13,7 @@ section {
     overflow: hidden;
     display: grid;
     place-items: center;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 .container {
     width: 400px;
@@ -68,14 +68,16 @@ section {
     letter-spacing: 1.3px;
 }
 #cloud {
-    font-size: 18px;
-    color: #333;
+    font-size: 20px;
+    color: #242323;
     letter-spacing: 1.3px;
+    font-weight: bolder;
 }
-#h1_low {
+#hi_low {
     font-size: 18px;
-    color: #333;
+    color: #800080	;
     letter-spacing: 1.3px;
+    font-weight: bolder;
 }
 @media screen and (max-width: 450px) {
     .container {
