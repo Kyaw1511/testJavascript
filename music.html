@@ -1,0 +1,68 @@
+<!-- 
+    Start Date : 9-7-2024;
+    Test JavaScript
+    Tutor : WebHub Page.
+    lesson: 18;
+    Math ;
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>music App</title>
+        <!-- link css -->
+        <link 
+            rel="stylesheet" 
+            href="music.css"
+        >
+        <!-- link to fontawesome -->
+        <link 
+            rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer" 
+        />
+    </head>
+    <body>
+        <section>
+            <div class="container">
+                <div class="nav">
+                    <p>
+                        <span id="current"></span>
+                        <span id="count"></span>
+                    </p>
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <ul id="nav-list">
+                    <li>
+                        <div>
+                            <h3>music tilte 1</h3>
+                            <p>singer</p>
+                        </div>
+                        <i class="fa-solid fa-play"></i>
+                    </li>
+                </ul>
+                <h1 id="title">music title 3</h1>
+                <p id="singer">artist</p>
+                <img 
+                    src="images/song1.jpg" 
+                    alt="song1">
+                <div class="btn-container">
+                    <i class="fa-solid fa-caret-left"></i>
+                    <i class="fa-solid fa-circle-play"></i>
+                    <!-- <i class="fa-solid fa-pause"></i> -->
+                    <i class="fa-solid fa-caret-right"></i>
+                </div>
+                <input 
+                    type="range"
+                    id="range"
+                    min="0"
+                    max="100"
+                >
+            </div>
+        </section>
+        <script src="music.js"></script>
+    </body>
+</html>
