@@ -63,7 +63,7 @@ section {
     transition: .4s linear;
 }
 .nav-list-active {
-    right: 0 m !important;
+    right: 0 !important;
 }
 .container #nav-list li {
     display: flex;

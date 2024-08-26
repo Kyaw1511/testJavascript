@@ -125,6 +125,15 @@ function changeRange() {
     track.currentTime = range.value * (track.duration / 100);
 }
 
+// toggle for menu navbar
+function toggleMenu() {
+    navList.classList.toggle("nav-list-active");
+    menu.classList.toggle("fa-circle-xmark");
+    console.log("Hello menu");
+} 
+// fetch music in navbar
+
+
 // event listener for play and pause btn
 play.addEventListener("click", checkMusic);
 // event listener for previous song
@@ -133,4 +142,6 @@ prev.addEventListener("click", prevSong);
 next.addEventListener("click", nextSong);
 // dynamic range track duration event listener
 range.addEventListener("change", changeRange);
+// navbar toggle
+menu.addEventListener("click", toggleMenu);
 
