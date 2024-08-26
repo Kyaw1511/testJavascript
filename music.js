@@ -132,7 +132,22 @@ function toggleMenu() {
     console.log("Hello menu");
 } 
 // fetch music in navbar
-
+music.map((music, index) =>{
+    let li = document.createElement("li");
+    li.innerHTML = `
+        <li>
+            <div>
+                <h3>${music.title}</h3>
+                <p>${music.singer}</p>
+            </div>
+            <i 
+                id="playSingle" 
+                class="trackSingle ${index}fa-solid fa-play"
+            >
+            </i>
+        </li>
+    `
+})
 
 // event listener for play and pause btn
 play.addEventListener("click", checkMusic);
