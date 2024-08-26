@@ -55,7 +55,9 @@ let index = 0;
 const track = document.createElement("audio");
 
 // load Track
-function loadTrack(index) {
+function loadTrack(i) {
+    let index = Number(i);
+
     title.innerHTML = music[index].title;
     singer.innerHTML = music[index].singer;
     poster.src = music[index].img_path;
@@ -130,9 +132,10 @@ function toggleMenu() {
     navList.classList.toggle("nav-list-active");
     menu.classList.toggle("fa-circle-xmark");
     console.log("Hello menu");
+
 } 
 // fetch music in navbar
-music.map((music, index) =>{
+music.map((music, index) => {
     let li = document.createElement("li");
     li.innerHTML = `
         <div>
@@ -151,9 +154,40 @@ music.map((music, index) =>{
 
 // load single song
 //အောင်ကျောချမ်းအေး မန္တလေး
-function loadSingleSong(e) {
+function loadSingleSong(loadSong) {
+    let loadSongSingle = loadSong.target.classList.contains("trackSingle");
+    let loadSongPlay = loadSong.target.classList.contains("fa-circle-play");
+    let loadSongPause = loadSong.target.classList.contains("fa-pause");
+
+    if(loadSongSingle && loadSongPlay) {
+        loadTrack(loadSong.target.classList[1]);
+        playing = false;
+        checkMusic()
+
+        Array.from(navList.children).forEach(li => {
+            li.lastElementChild.classList.remove("fa-pause");
+            li.lastElementChild.classList.add("fa-circle-play");
+        })
+
+        loadSong.target.classList.add("fa-pause");
+        loadSong.target.classList.remove("fa-circle-play"); 
+    }
+    else if(loadSongSingle && loadSongPause) {
+        playing = true;
+        checkMusic();
+
+        loadSong.target.classList.add("fa-circle-play");
+        loadSong.target.classList.remove("fa-pause");
+
+        console.log("Hello loadSong");
+    }
+    else {
+        navList.classList.toggle("nav-list-active");
+        menu.classList.remove("fa-cicrle-xmark");
+    }
+
     console.log("အောင်ကျော် ချမ်းအေး မန္တလေး");
-    console.log(e.target);
+    console.log(loadSong.target);
 }
 
 // event listener for play and pause btn
@@ -168,4 +202,5 @@ range.addEventListener("change", changeRange);
 menu.addEventListener("click", toggleMenu);
 // load single play
 navList.addEventListener("click", loadSingleSong);
+
 
