@@ -135,19 +135,26 @@ function toggleMenu() {
 music.map((music, index) =>{
     let li = document.createElement("li");
     li.innerHTML = `
-        <li>
-            <div>
-                <h3>${music.title}</h3>
-                <p>${music.singer}</p>
-            </div>
-            <i 
-                id="playSingle" 
-                class="trackSingle ${index}fa-solid fa-play"
-            >
-            </i>
-        </li>
-    `
+        <div>
+            <h3>${music.title}</h3>
+            <p>${music.singer}</p>
+        </div>
+        <i 
+            id="playSingle" 
+            class="trackSingle ${index} fa-solid fa-circle-play"
+        >
+        </i>
+
+    `;
+    navList.appendChild(li);
 })
+
+// load single song
+//အောင်ကျောချမ်းအေး မန္တလေး
+function loadSingleSong(e) {
+    console.log("အောင်ကျော် ချမ်းအေး မန္တလေး");
+    console.log(e.target);
+}
 
 // event listener for play and pause btn
 play.addEventListener("click", checkMusic);
@@ -159,4 +166,6 @@ next.addEventListener("click", nextSong);
 range.addEventListener("change", changeRange);
 // navbar toggle
 menu.addEventListener("click", toggleMenu);
+// load single play
+navList.addEventListener("click", loadSingleSong);
 
