@@ -37,5 +37,6 @@ button {
     font-size: 20px;
     text-transform: capitalize;
     letter-spacing: 1px;
+    border-radius: 20px;
     /* margin: 0px 30px; */
 }
