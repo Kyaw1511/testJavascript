@@ -5,7 +5,6 @@ const video = document.getElementById("video");
 const start = document.getElementById("start");
 const stop = document.getElementById("stop");
 
-
 window.addEventListener("load", async () => {
     const parts = [];
     await navigator.mediaDevices.getUserMedia({audio: true, video:true})
@@ -16,12 +15,11 @@ window.addEventListener("load", async () => {
         start.addEventListener("click", () => {
             alert("Start Record!!");
 
-            mediaRecorder = new mediaRecorder(stream);
+            mediaRecorder = new MediaRecorder(stream);
             mediaRecorder.start(1000);
             mediaRecorder.ondataavailable = function(e) {
                 parts.push(e.data);
             }
-            
             console.log("video start");
 
         });
@@ -34,15 +32,16 @@ window.addEventListener("load", async () => {
             const blob = new Blob(parts, {
                 type: "video/webm",
             });
-            const url = URL.createObjectURL(Blob);
+            const url = URL.createObjectURL(blob);
             let a = document.createElement("a");
             a.href = url;
             a.style.display = "none";
             a.download = "record.webm";
+            document.body.appendChild(a);
             a.click();
 
             console.log("video stop");
         })
 
     })
-})
+});
