@@ -1,0 +1,41 @@
+/* vedio record project */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+body {
+    background-color: #333;
+    color: #f3f3f3;
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container video {
+    width: 80;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+.btn-group {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 60px;
+}
+button {
+    padding: 20px;
+    border: none;
+    background-color: rgb(5, 23, 51);
+    color: #f3f3f3;
+    font-size: 20px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    /* margin: 0px 30px; */
+}
