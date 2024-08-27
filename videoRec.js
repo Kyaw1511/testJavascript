@@ -14,21 +14,21 @@ window.addEventListener("load", async () => {
 
         // starting recorder 
         start.addEventListener("click", () => {
-            // alert("Start Record!!");
+            alert("Start Record!!");
 
             mediaRecorder = new mediaRecorder(stream);
             mediaRecorder.start(1000);
             mediaRecorder.ondataavailable = function(e) {
                 parts.push(e.data);
             }
-
+            
             console.log("video start");
 
         });
 
         // stoping recorder
         stop.addEventListener("click", () => {
-            // alert("Stop Record !!");
+            alert("Stop Record !!");
 
             mediaRecorder.stop();
             const blob = new Blob(parts, {
@@ -45,4 +45,4 @@ window.addEventListener("load", async () => {
         })
 
     })
-});
+})
