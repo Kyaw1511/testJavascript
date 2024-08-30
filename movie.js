@@ -30,43 +30,12 @@ images.map((image) => {
     image.addEventListener("click", () => {
         images.forEach((img) => {
             img.style.opacity = "1";
-            // let landingImages = Array.from(sixSettingMovie)
-            // console.log(landingImages);
-        })
-            landingImg.src = image.src;
+            // landingImg.src = `${imgUrl + movie.poster_path}`;
             
-            // let landingImages = resMovie;
-            // landingImages.forEach(landImges);
-            // function landImges(movie) {
-            //     // landing movie poster for loop;
-            //     const secLanding = document.createElement("section");
-            //     secLanding.className = "landImg";
-            //     secLanding.innerHTML = `
-            //         <div class="landImg">
-            //             <img 
-            //                 src="${imgUrl + movie.poster_path}" 
-            //                 alt=""
-            //                 class="landing-image"
-            //             >
-            //         </div>
-            //     `;
-            //     document.querySelector(".landing-container").appendChild(secLanding);
-            // }
-        
+        })
         // landingImg.src = image.src;
-        // sixSettingMovie.forEach(landImg);
-        // function landImg(movie) {
-        //     const secImg = document.createElement("section");
-        //     secImg.className = "landing-image";
-        //     secImg.innerHTML = `
-        //         <img 
-        //             src="${imgUrl + movie.poster_path}" 
-        //             alt="images 1"
-        //         >
-        //     `;
-        //     document.querySelector(".landing-container").appendChild(secImg)
-        //     landingImg.src = `${imgUrl + movie.poster_path}`;
-        // }
+        landingImg.src = sixSettingMovie(movie)
+        landingImg.src = `${imgUrl + movie.poster_path}`;
         image.style.opacity = "0.5";
 
         console.log(image);
