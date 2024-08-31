@@ -196,6 +196,7 @@ function showMovie(data) {
                         class="landing-image"
                     >
         `
+        
         // const testing3 = document.querySelector(".setting-box");
         testing3.appendChild(divSetting);
         
@@ -211,8 +212,10 @@ function showMovie(data) {
                     // testing3.src = `${imgUrl+ movie.poster_path}`;
                     
                     // landingImg.src = image.src;
-                    landingImg.src = `${imgUrl + movie.poster_path}`;
+                    // landingImg.src = `${imgUrl + movie.poster_path}`;
+                    // testing2.src = `${imgUrl + movie.poster_path}`;
                 });
+                // landingImg.src = `${imgUrl + movie.poster_path}`;
                 // landingImg.src = image.src;
                 // landingImg.src = image.src;
                 image.style.opacity = "0.5";
@@ -221,7 +224,6 @@ function showMovie(data) {
                 console.log(image.src);
             }
         })
-        
         // landingImg.src = `${imgUrl + movie.poster_path}`;
         console.log("funner");
     })
