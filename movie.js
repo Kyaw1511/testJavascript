@@ -14,7 +14,7 @@ const loader = document.querySelector(".loader");
 // const resMovie = data.results;
 const movieContainer = document.querySelector(".movie-container");
 
-const testing3 = document.querySelector(".setting-box");
+const boxSetting = document.querySelector(".setting-box");
 const testing2 = document.querySelector("#landing");
 
 
@@ -109,6 +109,7 @@ function showMovie(data) {
     let resMovie = data.results;
     movieContainer.innerHTML = "";
     resMovie.forEach(displayMovie);
+
     function displayMovie(movie) {
         // card for loop;
         const divCard = document.createElement("div");
@@ -151,39 +152,33 @@ function showMovie(data) {
                 >
             </div>
         `;
-        const testing = document.createElement("div");
-        testing.className = "landImg";
-        testing.innerHTML = `
-            <img 
-                        src="${imgUrl + movie.poster_path}" 
-                        alt=""
-                        class="landing-image"
-                    >
-        `
-        
         // const testing3 = document.querySelector(".setting-box");
-        testing3.appendChild(divSetting);
+        boxSetting.appendChild(divSetting);
         
-        testing2.appendChild(testing);
     }
-    testing3.addEventListener("click", (movie) => {
+
+    boxSetting.addEventListener("click", () => {
         images.map((image) => {
             image.addEventListener("click", imageSetting );
             function imageSetting() {
                 images.forEach((img) => {
-                    img.style.opacity = "1";
+                    // img.style.opacity = "1";
+                    // landingImg.src = img.src;
+                    // landingImg.src = boxSetting.src;
+                    // landingImg.src = `${imgUrl + movie.title}`;
                 });
-                
-                // landingImg.src = image.src;
+                // landingImg.src = img.src;
+                landingImg.src = boxSetting.src;
                 image.style.opacity = "0.5";
-        
                 console.log(image);
-                console.log(image.src);
+                console.log(image.src); 
             }
         })
+        // landingImg.src = `${imgUrl + movie.title}`;
+        console.log(landingImg.src);
         console.log("funner");
     })
-
+    
     // search Movie
     searchMovie.addEventListener("keypress", (e) => {
         if(e.keyCode === 13) {
@@ -222,7 +217,6 @@ function showMovie(data) {
     console.log("5");
     console.log(resMovie.length);
 }
-// function display movie;
 
 
 // addEventListener portion
