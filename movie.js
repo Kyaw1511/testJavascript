@@ -12,6 +12,9 @@ const scrollTopArr = document.querySelector(".scroll-top");
 const searchMovie = document.querySelector("#searchMovie");
 const loader = document.querySelector(".loader");
 
+const testing3 = document.querySelector(".setting-box");
+const testing2 = document.querySelector("#landing");
+
 // Menu Toggle
 menuToggle.addEventListener("click", () => {
     let navMenu = document.querySelector("#nav-menu");
@@ -26,22 +29,23 @@ settingToggle.addEventListener("click", () => {
 })
 
 // Setting box image
-images.map((image) => {
-    image.addEventListener("click", () => {
-        images.forEach((img) => {
-            img.style.opacity = "1";
-            // landingImg.src = `${imgUrl + movie.poster_path}`;
+// images.map((image) => {
+//     image.addEventListener("click", imageSetting );
+//     function imageSetting() {
+//         images.forEach((img) => {
+//             img.style.opacity = "1";
+//             // testing3.src = `${imgUrl+ movie.poster_path}`;
             
-        })
-        // landingImg.src = image.src;
-        landingImg.src = sixSettingMovie(movie)
-        landingImg.src = `${imgUrl + movie.poster_path}`;
-        image.style.opacity = "0.5";
+//             // landingImg.src = testing2.image.src;
+//         });
+//         // landingImg.src = image.src;
+//         // landingImg.src = `${imgUrl + movie.poster_path}`;
+//         image.style.opacity = "0.5";
 
-        console.log(image);
-        console.log(image.src);
-    })
-})
+//         console.log(image);
+//         console.log(image.src);
+//     }
+// })
 
 
 // darkmode change
@@ -163,9 +167,13 @@ function showMovie(data) {
         console.log(movie.vote_average);
         console.log(typeof(movie.vote_average));
     }
+
     // slice 5 array;
     let settingMovie = resMovie
     let sixSettingMovie = settingMovie.slice(0,5);
+    // la.addEventListener("click", () => {
+    //     console.log("saturday");
+    // })
     sixSettingMovie.forEach(showSixMovie);
     function showSixMovie(movie) {
         // setting movie for loop ;
@@ -179,24 +187,44 @@ function showMovie(data) {
                 >
             </div>
         `;
-        document.querySelector(".setting-box").appendChild(divSetting);
+        const testing = document.createElement("div");
+        testing.className = "landImg";
+        testing.innerHTML = `
+            <img 
+                        src="${imgUrl + movie.poster_path}" 
+                        alt=""
+                        class="landing-image"
+                    >
+        `
+        // const testing3 = document.querySelector(".setting-box");
+        testing3.appendChild(divSetting);
         
+        testing2.appendChild(testing);
+          
+    }
+    testing3.addEventListener("click", (movie) => {
         images.map((image) => {
-            image.addEventListener("click", () => {
-                document.querySelector(".landing-container").appendChild(divSetting);
+            image.addEventListener("click", imageSetting );
+            function imageSetting() {
                 images.forEach((img) => {
                     img.style.opacity = "1";
-                    landingImg.src = img.src;
-                })
+                    // testing3.src = `${imgUrl+ movie.poster_path}`;
+                    
+                    // landingImg.src = image.src;
+                    landingImg.src = `${imgUrl + movie.poster_path}`;
+                });
                 // landingImg.src = image.src;
-                // landingImg.src = `${imgUrl + movie.poster_path}`;
+                // landingImg.src = image.src;
                 image.style.opacity = "0.5";
         
                 console.log(image);
                 console.log(image.src);
-            })
-        })   
-    }
+            }
+        })
+        
+        // landingImg.src = `${imgUrl + movie.poster_path}`;
+        console.log("funner");
+    })
 
     // search Movie
     searchMovie.addEventListener("keypress", (e) => {
