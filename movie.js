@@ -1,4 +1,4 @@
-
+// Document object model;
 const menuToggle = document.querySelector("#menu-toggle");
 const settingToggle = document.querySelector("#setting-toggle");
 const settingSun = document.querySelector("#settingSun");
@@ -11,48 +11,39 @@ const headerSec = document.getElementById("headerSec");
 const scrollTopArr = document.querySelector(".scroll-top");
 const searchMovie = document.querySelector("#searchMovie");
 const loader = document.querySelector(".loader");
+// const resMovie = data.results;
+const movieContainer = document.querySelector(".movie-container");
 
 const testing3 = document.querySelector(".setting-box");
 const testing2 = document.querySelector("#landing");
 
-// Menu Toggle
-menuToggle.addEventListener("click", () => {
-    let navMenu = document.querySelector("#nav-menu");
-    navMenu.classList.toggle("nav-active");
-})
 
-// Setting Toggle
-settingToggle.addEventListener("click", () => {
+// fetch portion
+// link to tmdb website;
+const url = {
+    apiKey: "api_key=f98bf3c4437317262eb8c464167edf4d",
+    baseUrl: "https://api.themoviedb.org/3/discover/movie?",
+}
+const imgUrl = "https://image.tmdb.org/t/p/w500/";
+const popularUrl = url.baseUrl + "sort_by=popularity.desc&" + url.apiKey;
+const searchUrl = "https://api.themoviedb.org/3/search/movie?" + url.apiKey;
+
+
+// function portion
+// Menu Toggle
+function toggleMenu() {
+    navMenu.classList.toggle("nav-active");
+}
+
+// setting Toggle
+function toggleSetting() {
     let settingBox = document.querySelector(".setting-box");
     settingBox.classList.toggle("setting-box-active");
-    
-})
+}
 
-// Setting box image
-// images.map((image) => {
-//     image.addEventListener("click", imageSetting );
-//     function imageSetting() {
-//         images.forEach((img) => {
-//             img.style.opacity = "1";
-//             // testing3.src = `${imgUrl+ movie.poster_path}`;
-            
-//             // landingImg.src = testing2.image.src;
-//         });
-//         // landingImg.src = image.src;
-//         // landingImg.src = `${imgUrl + movie.poster_path}`;
-//         image.style.opacity = "0.5";
-
-//         console.log(image);
-//         console.log(image.src);
-//     }
-// })
-
-
-// darkmode change
-settingSun.addEventListener("click", darkModeToggle);
+// darkmode Toggle
 let darkMode = localStorage.getItem("darkMode");
-
-// darkMode check 
+// check darkmode
 if(darkMode === "enabled") {
     darkModeOn();
 }
@@ -62,38 +53,34 @@ function darkModeToggle() {
         darkModeOff();
     }
     else {
-        darkModeOn()
+        darkModeOn();
     }
 }
-// call dark mode off
+// call darkmode off
 function darkModeOff() {
     document.body.classList.remove("dark");
     darkMode = false;
     localStorage.setItem("darkMode", null);
     icon.className = "bx bxs-moon";
     searchText.className = "searchText";
-    // document.body.classList.remove = "searchText";
-    // searchText.classList.add = "searchText";
 }
-// call dark mode on
+// call darkmode on
 function darkModeOn() {
     document.body.classList.add("dark");
     darkMode = true;
     localStorage.setItem("darkMode", "enabled");
     icon.className = "bx bxs-sun";
     searchText.className = "searchText";
-    // document.body.classList.add = "searchText";
-    // searchText.classList.remove = "searchText";
 }
 
-// scroll function
-window.addEventListener("scroll", scrollingY);
+// function scroll y axis
 function scrollingY() {
     if(window.scrollY > 200) {
         headerSec.style.backgroundColor = "#f4f4f4";
         headerSec.style.color = "#080808";
         scrollTopArr.style.bottom = "20px";
-        console.log("Hello scroll Y");
+
+        console.log("Hello Scroll Y");
     }
     else {
         headerSec.style.backgroundColor = "#ffd900";
@@ -101,25 +88,15 @@ function scrollingY() {
         scrollTopArr.style.bottom = "-100px";
     }
 }
-scrollTopArr.addEventListener("click", () => {
+
+// function scroll top Arrow;
+function scrollTopArrBtn() {
     window.scroll({
         top: 0,
         left: 0,
         behavior: "smooth",
-        
-    })
-    // window.scroll(0, 0);
-    console.log("press scroll y arrow");
-})
-
-// fetch movie
-const url = {
-    apiKey : "api_key=f98bf3c4437317262eb8c464167edf4d",
-    baseUrl : "https://api.themoviedb.org/3/discover/movie?",
-}
-const imgUrl = "https://image.tmdb.org/t/p/w500/";
-const popularUrl = url.baseUrl+ "sort_by=popularity.desc&" + url.apiKey;
-const searchUrl = "https://api.themoviedb.org/3/search/movie?" + url.apiKey;
+    });
+};
 
 // movie path;
 fetchMovie(popularUrl);
@@ -130,22 +107,17 @@ function fetchMovie(path) {
 }
 function showMovie(data) {
     let resMovie = data.results;
-    document.querySelector(".movie-container").innerHTML = "";
-    // annymonus function for movie foreach => another way;
-    // resMovie.forEach(movie => {
-    //     console.log(movie.original_title);
-    // })
+    movieContainer.innerHTML = "";
     resMovie.forEach(displayMovie);
     function displayMovie(movie) {
-
-        // card for loop 
+        // card for loop;
         const divCard = document.createElement("div");
         divCard.className = "card";
         divCard.innerHTML = `
             <div class="img-box">
                 <img src="${imgUrl + movie.poster_path}" alt="">
             </div>
-
+    
             <div class="details">
                 <h3>${movie.original_title}</h3>
                 <span>${movie.vote_average.toFixed(2)}</span>
@@ -160,23 +132,15 @@ function showMovie(data) {
                 </p>
             </div>
         `;
-        document.querySelector(".movie-container").appendChild(divCard);
-
-        // console.log("displayFunction");
-        console.log(movie.original_title);
-        console.log(movie.vote_average);
-        console.log(typeof(movie.vote_average));
+        movieContainer.appendChild(divCard);
     }
 
     // slice 5 array;
-    let settingMovie = resMovie
-    let sixSettingMovie = settingMovie.slice(0,5);
-    // la.addEventListener("click", () => {
-    //     console.log("saturday");
-    // })
+    let settingMovie = resMovie;
+    let sixSettingMovie = settingMovie.slice(0, 5);
     sixSettingMovie.forEach(showSixMovie);
     function showSixMovie(movie) {
-        // setting movie for loop ;
+        // setting moviefor loop:
         const divSetting = document.createElement("div");
         divSetting.className = "setting-container";
         divSetting.innerHTML = `
@@ -201,7 +165,6 @@ function showMovie(data) {
         testing3.appendChild(divSetting);
         
         testing2.appendChild(testing);
-          
     }
     testing3.addEventListener("click", (movie) => {
         images.map((image) => {
@@ -209,14 +172,8 @@ function showMovie(data) {
             function imageSetting() {
                 images.forEach((img) => {
                     img.style.opacity = "1";
-                    // testing3.src = `${imgUrl+ movie.poster_path}`;
-                    
-                    // landingImg.src = image.src;
-                    // landingImg.src = `${imgUrl + movie.poster_path}`;
-                    // testing2.src = `${imgUrl + movie.poster_path}`;
                 });
-                // landingImg.src = `${imgUrl + movie.poster_path}`;
-                // landingImg.src = image.src;
+                
                 // landingImg.src = image.src;
                 image.style.opacity = "0.5";
         
@@ -224,7 +181,6 @@ function showMovie(data) {
                 console.log(image.src);
             }
         })
-        // landingImg.src = `${imgUrl + movie.poster_path}`;
         console.log("funner");
     })
 
@@ -247,8 +203,7 @@ function showMovie(data) {
         loader.style.display = "none";
     })
 
-
-    // console portions
+    // console portions;
     console.log(sixSettingMovie);
     console.log(sixSettingMovie[0].title);
     console.log(resMovie);
@@ -266,10 +221,25 @@ function showMovie(data) {
     console.log(data);
     console.log("5");
     console.log(resMovie.length);
-    
 }
+// function display movie;
 
-// console portions
+
+// addEventListener portion
+// add Event listener for menu togggle;
+menuToggle.addEventListener("click", toggleMenu);
+// add Event listener for setting toggle;
+settingToggle.addEventListener("click", toggleSetting);
+// add Event listener for darkmode toggle;
+settingSun.addEventListener("click", darkModeToggle);
+// add Event lister for scroll function;
+window.addEventListener("scroll", scrollingY);
+// add Event listener for scrollTopArrowBtn;
+scrollTopArr.addEventListener("click", scrollTopArrBtn);
+
+// console portion;
 console.log(window.scrollY);
 console.log(images);
 console.log(popularUrl);
+
+
