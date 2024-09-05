@@ -173,7 +173,7 @@ main {
     position: relative; 
 }
 #landing img {
-    border: 2px solid green;
+    /* border: 2px solid green; */
     position: absolute;
     top: 0;
     left: 0;
@@ -193,7 +193,7 @@ main {
     background-color: rgba(0, 0, 0, 623);
 }
 .scroll-top {
-    border: 2px solid green !important;
+    /* border: 2px solid green !important; */
     position: fixed;
     right: 10px;
     bottom: -100px;
@@ -252,7 +252,7 @@ main {
     margin-top: 200px;
 }
 #popular .movie-container {
-    border: 2px solid saddlebrown;
+    /* border: 2px solid saddlebrown; */
     width: 80%;
     height: auto;
     display: grid;
