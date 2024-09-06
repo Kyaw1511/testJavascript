@@ -15,7 +15,7 @@ const loader = document.querySelector(".loader");
 const movieContainer = document.querySelector(".movie-container");
 
 const boxSetting = document.querySelector(".setting-box");
-const testing2 = document.querySelector("#landing");
+const testing2 = document.querySelector("#testing2");
 
 
 // fetch portion
@@ -161,14 +161,16 @@ function showMovie(data) {
         images.map((image) => {
             image.addEventListener("click", imageSetting );
             function imageSetting() {
-                images.forEach((img) => {
-                    // img.style.opacity = "1";
-                    // landingImg.src = img.src;
-                    // landingImg.src = boxSetting.src;
-                    // landingImg.src = `${imgUrl + movie.title}`;
-                });
+                // images.forEach((img) => {
+                //     // img.style.opacity = "1";
+                //     // landingImg.src = img.src;
+                //     // landingImg.src = boxSetting.src;
+                //     // landingImg.src = `${imgUrl + movie.title}`;
+                // });
                 // landingImg.src = img.src;
-                landingImg.src = boxSetting.src;
+                // landingImg.src = boxSetting.src;
+                landingImg.src = boxSetting;
+                // landingImg.src = boxSetting + `${imgUrl + movie.title}`;
                 image.style.opacity = "0.5";
                 console.log(image);
                 console.log(image.src); 
