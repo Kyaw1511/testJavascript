@@ -3,7 +3,8 @@ const menuToggle = document.querySelector("#menu-toggle");
 const settingToggle = document.querySelector("#setting-toggle");
 const settingSun = document.querySelector("#settingSun");
 const navMenu = document.querySelector("#nav-menu");
-const images = Array.from(document.querySelectorAll(".setting-container img"));
+// const images = Array.from(document.querySelectorAll(".setting-container img"));
+const images = document.querySelector(".setting-images");
 const landingImg = document.querySelector(".landing-image");
 const icon = document.querySelector("#toggle-icon");
 const searchText = document.querySelector(".word");
@@ -15,7 +16,7 @@ const loader = document.querySelector(".loader");
 const movieContainer = document.querySelector(".movie-container");
 
 const boxSetting = document.querySelector(".setting-box");
-const testing2 = document.querySelector("#testing2");
+
 
 
 // fetch portion
@@ -98,6 +99,15 @@ function scrollTopArrBtn() {
     });
 };
 
+// function change setting image in home page;
+// function imgaesChangeHome(img) {
+//     // landingImg.src = `https://image.tmdb.org/t/p/w500//8cdWjvZQUExUUTzyp4t6EDMubfO.jpg`;
+//     // landingImg.src = `https://image.tmdb.org/t/p/w500//PywbVPeIhBFc33QXktnhMaysmL.jpg`;
+//     landingImg.src = boxSetting;
+//     console.log(boxSetting);
+//     console.log("change image in home page");
+// }
+
 // movie path;
 fetchMovie(popularUrl);
 function fetchMovie(path) {
@@ -153,33 +163,9 @@ function showMovie(data) {
             </div>
         `;
         // const testing3 = document.querySelector(".setting-box");
-        boxSetting.appendChild(divSetting);
-        
+        boxSetting.appendChild(divSetting);  
     }
-
-    boxSetting.addEventListener("click", () => {
-        images.map((image) => {
-            image.addEventListener("click", imageSetting );
-            function imageSetting() {
-                // images.forEach((img) => {
-                //     // img.style.opacity = "1";
-                //     // landingImg.src = img.src;
-                //     // landingImg.src = boxSetting.src;
-                //     // landingImg.src = `${imgUrl + movie.title}`;
-                // });
-                // landingImg.src = img.src;
-                // landingImg.src = boxSetting.src;
-                landingImg.src = boxSetting;
-                // landingImg.src = boxSetting + `${imgUrl + movie.title}`;
-                image.style.opacity = "0.5";
-                console.log(image);
-                console.log(image.src); 
-            }
-        })
-        // landingImg.src = `${imgUrl + movie.title}`;
-        console.log(landingImg.src);
-        console.log("funner");
-    })
+    
     
     // search Movie
     searchMovie.addEventListener("keypress", (e) => {
@@ -193,6 +179,35 @@ function showMovie(data) {
             }
         }
         console.log(e.keyCode);
+    })
+
+    // images.map((image) => {
+    //     image.addEventListener("click", imgaesChangeHome);
+    // });
+    boxSetting.addEventListener("click", (divSetting) => {
+        // images.addEventListener("click", imgaesChangeHome);
+        // function imgaesChangeHome(movie) {
+        //     // landingImg.src = `${imgUrl + movie.poster_path}`;
+
+        //     console.log("change image in home page2");
+        // }
+        // setting image in home page;
+        // function imgaesChangeHome() {
+            // landingImg.src = `https://image.tmdb.org/t/p/w500//8cdWjvZQUExUUTzyp4t6EDMubfO.jpg`;
+            // landingImg.src = `https://image.tmdb.org/t/p/w500//PywbVPeIhBFc33QXktnhMaysmL.jpg`;
+            // landingImg.src = boxSetting;
+            // console.log(boxSetting);
+            // console.log("change image in home page");
+        // }
+        landingImg.src = `https://image.tmdb.org/t/p/w500//8cdWjvZQUExUUTzyp4t6EDMubfO.jpg`;
+        // landingImg.src = `${imgUrl + movie.poster_path}`;
+        // landingImg.src = (`imgUrl/PywbVPeIhBFc33QXktnhMaysmL.jpg`);
+        // landingImg.src = `imgUrl+movie.poster_path`;
+        // landingImg.src = `${sixSettingMovie.src}`;
+            console.log(landingImg.src);
+            console.log("change image in home page2");
+
+        // console.log("change image in home page2");
     })
 
     // loader 
@@ -232,6 +247,11 @@ settingSun.addEventListener("click", darkModeToggle);
 window.addEventListener("scroll", scrollingY);
 // add Event listener for scrollTopArrowBtn;
 scrollTopArr.addEventListener("click", scrollTopArrBtn);
+// add Event listener for setting image;
+// images.map((image) => {
+//     image.addEventListener("click", imgaesChangeHome);
+// })
+
 
 // console portion;
 console.log(window.scrollY);
