@@ -1,15 +1,23 @@
 // fetch data
-let apiTest = document.querySelector("#sapiTest");
+let reqresFetch = document.querySelector("#reqresFetch");
 let text = "";
 
 
-fetch("https://reqres.in/api/users")
+fetch("https://reqres.in/api/users?page=2")
 .then(answer => answer.json())
-.then(data => {
-    for(let i = 0; i < data.length; i++) {
-        text += `<td>${data.data[2].email}</td> <br>`;
+.then(res => {
+    for(let i = 0; i < res.length; i++) {
+        text += `<td> ${res.data[i]} </td> <br>`;
+        console.log(data[i]);
     }
-    console.log(text)
+    console.log(res);
+    console.log(res.data[1].first_name);
+
+    // reqresFetch.innerHTML = data.data[1].first_name;
+    // reqresFetch.innerHTML = data[1].first_name;
+    // reqresFetch.innerHTML = res.data[1].email;
+    // console.log(text.data[1].first_name)
+    reqresFetch.innerHTML = text.value;
 });
 
 async function fetchDataRequ() {
