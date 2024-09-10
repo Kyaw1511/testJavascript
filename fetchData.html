@@ -27,10 +27,31 @@
             content="width= device-width, initial-scale=1.0"
         >
         <title>Document</title>
+        <style>
+            #userData{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 20px;
+            }
+            .user {
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                margin: 10px;
+                padding: 10px;
+                width: 250px;
+                height: 180px;
+            }
+            .user p {
+                text-align: center;
+                margin-bottom: 5px;
+            }
+        </style>
     </head>
     <body>
         <h2>api fetch</h2>
         <ul id="reqresFetch"></ul>
+        <div id="userData"></div>
         <!-- fetch out data js file -->
         <script src="fetchData.js"></script>
     </body>
