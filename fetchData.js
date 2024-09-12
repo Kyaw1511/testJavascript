@@ -8,11 +8,6 @@ fetch("https://reqres.in/api/users")
 .then(response => response.json())
 .then(res => {
     displayUserData(res.data);
-    // for(let i = 0; i < res.length; i++) {
-    //     text +=i + " " + res.data[i].firstname + "<br>";
-    //     // text += `<td> ${data.data[i]} </td> <br>`;
-    //     console.log(data[i]);
-    // }
     
     console.log(res);
     console.log(typeof(res));
@@ -23,7 +18,7 @@ fetch("https://reqres.in/api/users")
     // reqresFetch.innerHTML = res.[1].email;
     // console.log(text.[1].first_name)
     // reqresFetch.innerHTML = text.first_name;
-});
+})
 function displayUserData(users) {
     const userDataEle = document.getElementById("userData");
     userDataEle.innerHTML = "";
@@ -34,7 +29,7 @@ function displayUserData(users) {
 
         // fetch first_name from object
         const name = document.createElement("p");
-        name.textContent = `Name : ${user.first_name}`;
+        name.textContent = `Name : ${user.first_name} ${user.last_name}`;
 
         // fetch email from object
         const email = document.createElement("email");
@@ -42,8 +37,8 @@ function displayUserData(users) {
 
         // fetch avatar from object
         const avatar = document.createElement("img");
-        avatar.src = user.src;
-        avatar.alt = `Avatar of ${user.first_name} ${user.last_name}`;
+        avatar.src = user.avatar;
+        avatar.alt = `Avatar of ${user.first_name} `;
 
         // appendChild 
         userDiv.appendChild(avatar);
@@ -63,13 +58,3 @@ async function fetchDataRequ() {
     console.log(firstname.data[2].first_name);
 }
 fetchDataRequ();
-
-
-
-// for(let i = 0; i < arr.length; i++) {
-//     for(let x = 0; x < arr[i].length; x++) {
-//         array2.innerHTML += `Array ${i} of ${x} ==> ${arr[i][x]} <br>`;
-//     }
-//     array.innerHTML += `${arr[i]} <br>`;
-//     console.log(arr[i]);
-// }
