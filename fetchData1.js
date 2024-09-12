@@ -4,11 +4,14 @@ let text = "";
 fetch("https://reqres.in/api/users")
 .then(answer => answer.json())
 .then(res => {
-    for(let i = 0; i < res.length; i++) {
-        text += i + " " + res.data[i] + "<br>";
-        console.log(data)
+    for(let i = 0; i < res.length; i++) { 
+    // for(let i in answer) {
+        text += i + " " + res.data.data[i] + "<br>"; 
+        
     }
-    apiReques.innerHTML = text.first_name;
+    // apiReques.innerHTML = res.data[1].first_name;
+    apiReques.textContent += text.first_name;
+    // apiReques.textContent = res.data[2].first_name;
 
     console.log(res);
     console.log(typeof(res));
