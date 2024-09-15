@@ -22,15 +22,19 @@ const data = {
     },
 }
 
-const langSec = document.querySelector(".languageSection");
-const buttons = Array.from(document.querySelectorAll("a"));
+const langSec = document.querySelector(".languageSection"); 
+const buttons = document.querySelectorAll(".languageSection a");
 const textTitle = document.querySelector(".title");
 const textDescription = document.querySelector(".description");
 
-// function for change active button;
-function changeActive() {
-    console.log("hello");
-}
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        langSec.querySelector(".active").classList.remove("active");
+        button.classList.add('active');
 
-// addEventListener for change acitve button;
-buttons.addEventListener("click", changeActive);
+        const attr = button.getAttribute("language");
+
+        textTitle.textContent = data[attr].title;
+        textDescription.textContent = data[attr].description;
+    });
+})
