@@ -4,8 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .input1 {
+            width: 100px;
+            padding: 10px;
+            margin: 8px 0px;
+            box-sizing: border-box;
+            border: 3px solid #0047AB	;
+            border-radius: 8px;
+
+        }
+        .input1[type="number"]::-webkit-outer-spin-button,
+        .input1[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    </style>
 </head>
 <body>
+    <!-- tested for loop -->
+    <p id="test1"></p>
+    <p id="test2"></p>
+    <!-- for loop even number 1 to 10 -->
+    <p id="test3"></p>
+    <!-- while loop -->
+    <p id="test4"></p>
+    
+    <!-- do while loop -->
+    <input 
+        class="input1"
+        type="number"
+    >
+
     <script src="nestedIfBreak.js"></script>
 </body>
 </html>
