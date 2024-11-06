@@ -17,6 +17,7 @@ const tested3 = document.getElementById("test3");
 const tested4 = document.getElementById("test4");
 const inputVal1 = document.getElementById("input1");
 const inputPara1Val1 = document.getElementById("inputPara1");
+const inputPara1Val2 = document.getElementById("inputPara2");
 
 let testing1 = "";
 for (let y = 1; y < 6; ++y) {
@@ -50,13 +51,3 @@ while (g < 4) {
 tested4.innerHTML = testing4;
 
 // do while loop for input V1.0;
-function displayInputVal1 () {
-    do {
-        inputPara1Val1.innerHTML = inputVal1.value;
-        alert("THis is over 100");
-        
-    } while (inputVal1.value <= 100 && inputVal1.value);
-    
-    // inputPara1Val1.innerHTML = inputVal1.value;
-    console.log(inputVal1.value)
-}
