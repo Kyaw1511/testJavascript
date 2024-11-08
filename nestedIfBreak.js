@@ -50,4 +50,19 @@ while (g < 4) {
 }
 tested4.innerHTML = testing4;
 
-// do while loop for input V1.0;
+// switch case
+function myFavDrinkItem() {
+    let text;
+    let favDrink = prompt("What's your favourite cocktail drink.");
+    switch(favDrink) {
+        case "Coca-Colar":
+            text = `Excellent choice! ${favDrink} is good for your soul.`;
+            break;
+        case "Pesi":
+            text = `${favDrink} is my favourite too!.`;
+            break;
+        default:
+            text = "I have just drink water."
+    }
+    document.getElementById("myFavDrinkItemBe").innerHTML = text;
+}
